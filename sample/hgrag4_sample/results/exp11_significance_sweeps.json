@@ -1,0 +1,2372 @@
+{
+  "_evaluated_on": "test",
+  "n_questions": 67,
+  "n_boot": 10000,
+  "seed": 20240917,
+  "sign_convention": "Delta = configuration - reference; negative Delta means the configuration is worse",
+  "test_definitions": {
+    "paired_bootstrap": "10,000 resamples, seed 20240917, two-sided empirical p-value, 95% percentile CI; identical implementation to Table 2",
+    "mcnemar_exact": "exact two-sided McNemar on the binary complete-evidence hit indicator (a question counts as a hit iff its top-k list contains all of its gold documents); config_wins / ref_wins are the discordant pairs",
+    "composite": "S_c = 0.4*R@1 + 0.3*R@5 + 0.3*R@10"
+  },
+  "guarantee": {
+    "reference": "No guarantee",
+    "reference_mode": "off",
+    "reference_guarantee_k": 0,
+    "comparisons": {
+      "Bottom-up (g=2)": {
+        "metrics": {
+          "recall@1": {
+            "label": "Recall@1",
+            "config_value": 0.4254,
+            "ref_value": 0.4179,
+            "n": 67,
+            "mean_diff": 0.007463,
+            "ci95": [
+              0.0,
+              0.022388
+            ],
+            "p_value": 0.6282,
+            "prob_a_better": 0.6329
+          },
+          "recall@3": {
+            "label": "Recall@3",
+            "config_value": 0.694,
+            "ref_value": 0.7463,
+            "n": 67,
+            "mean_diff": -0.052239,
+            "ci95": [
+              -0.104478,
+              0.0
+            ],
+            "p_value": 0.0638,
+            "prob_a_better": 0.0138
+          },
+          "recall@5": {
+            "label": "Recall@5",
+            "config_value": 0.806,
+            "ref_value": 0.8284,
+            "n": 67,
+            "mean_diff": -0.022388,
+            "ci95": [
+              -0.052239,
+              0.0
+            ],
+            "p_value": 0.1219,
+            "prob_a_better": 0.0
+          },
+          "recall@10": {
+            "label": "Recall@10",
+            "config_value": 0.9627,
+            "ref_value": 0.9627,
+            "n": 67,
+            "mean_diff": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "p_value": 1.0,
+            "prob_a_better": 0.0
+          },
+          "score": {
+            "label": "Composite score",
+            "config_value": 0.7007462686567163,
+            "ref_value": 0.7044776119402985,
+            "n": 67,
+            "mean_diff": -0.003731,
+            "ci95": [
+              -0.013433,
+              0.00597
+            ],
+            "p_value": 0.4346,
+            "prob_a_better": 0.2152
+          }
+        },
+        "mcnemar": {
+          "recall@1": {
+            "b": 0,
+            "c": 0,
+            "n_discordant": 0,
+            "p_value": 1.0,
+            "net_questions": 0,
+            "config_wins": 0,
+            "ref_wins": 0
+          },
+          "recall@5": {
+            "b": 0,
+            "c": 3,
+            "n_discordant": 3,
+            "p_value": 0.25,
+            "net_questions": -3,
+            "config_wins": 0,
+            "ref_wins": 3
+          },
+          "recall@10": {
+            "b": 0,
+            "c": 0,
+            "n_discordant": 0,
+            "p_value": 1.0,
+            "net_questions": 0,
+            "config_wins": 0,
+            "ref_wins": 0
+          }
+        },
+        "mode": "paper",
+        "guarantee_k": 2
+      },
+      "Bottom-up (g=4)": {
+        "metrics": {
+          "recall@1": {
+            "label": "Recall@1",
+            "config_value": 0.4179,
+            "ref_value": 0.4179,
+            "n": 67,
+            "mean_diff": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "p_value": 1.0,
+            "prob_a_better": 0.0
+          },
+          "recall@3": {
+            "label": "Recall@3",
+            "config_value": 0.7463,
+            "ref_value": 0.7463,
+            "n": 67,
+            "mean_diff": 0.0,
+            "ci95": [
+              -0.044776,
+              0.044776
+            ],
+            "p_value": 1.0,
+            "prob_a_better": 0.431
+          },
+          "recall@5": {
+            "label": "Recall@5",
+            "config_value": 0.8209,
+            "ref_value": 0.8284,
+            "n": 67,
+            "mean_diff": -0.007463,
+            "ci95": [
+              -0.059701,
+              0.044776
+            ],
+            "p_value": 0.8942,
+            "prob_a_better": 0.3371
+          },
+          "recall@10": {
+            "label": "Recall@10",
+            "config_value": 0.9552,
+            "ref_value": 0.9627,
+            "n": 67,
+            "mean_diff": -0.007463,
+            "ci95": [
+              -0.022388,
+              0.0
+            ],
+            "p_value": 0.6375,
+            "prob_a_better": 0.0
+          },
+          "score": {
+            "label": "Composite score",
+            "config_value": 0.7,
+            "ref_value": 0.7044776119402985,
+            "n": 67,
+            "mean_diff": -0.004478,
+            "ci95": [
+              -0.020149,
+              0.011194
+            ],
+            "p_value": 0.6515,
+            "prob_a_better": 0.281
+          }
+        },
+        "mcnemar": {
+          "recall@1": {
+            "b": 0,
+            "c": 0,
+            "n_discordant": 0,
+            "p_value": 1.0,
+            "net_questions": 0,
+            "config_wins": 0,
+            "ref_wins": 0
+          },
+          "recall@5": {
+            "b": 6,
+            "c": 6,
+            "n_discordant": 12,
+            "p_value": 1.0,
+            "net_questions": 0,
+            "config_wins": 6,
+            "ref_wins": 6
+          },
+          "recall@10": {
+            "b": 0,
+            "c": 1,
+            "n_discordant": 1,
+            "p_value": 1.0,
+            "net_questions": -1,
+            "config_wins": 0,
+            "ref_wins": 1
+          }
+        },
+        "mode": "paper",
+        "guarantee_k": 4
+      },
+      "Bottom-up (g=6)": {
+        "metrics": {
+          "recall@1": {
+            "label": "Recall@1",
+            "config_value": 0.4179,
+            "ref_value": 0.4179,
+            "n": 67,
+            "mean_diff": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "p_value": 1.0,
+            "prob_a_better": 0.0
+          },
+          "recall@3": {
+            "label": "Recall@3",
+            "config_value": 0.7388,
+            "ref_value": 0.7463,
+            "n": 67,
+            "mean_diff": -0.007463,
+            "ci95": [
+              -0.022388,
+              0.0
+            ],
+            "p_value": 0.6286,
+            "prob_a_better": 0.0
+          },
+          "recall@5": {
+            "label": "Recall@5",
+            "config_value": 0.8209,
+            "ref_value": 0.8284,
+            "n": 67,
+            "mean_diff": -0.007463,
+            "ci95": [
+              -0.037313,
+              0.022388
+            ],
+            "p_value": 0.8239,
+            "prob_a_better": 0.2413
+          },
+          "recall@10": {
+            "label": "Recall@10",
+            "config_value": 0.9403,
+            "ref_value": 0.9627,
+            "n": 67,
+            "mean_diff": -0.022388,
+            "ci95": [
+              -0.052239,
+              0.0
+            ],
+            "p_value": 0.1235,
+            "prob_a_better": 0.0
+          },
+          "score": {
+            "label": "Composite score",
+            "config_value": 0.6955223880597015,
+            "ref_value": 0.7044776119402985,
+            "n": 67,
+            "mean_diff": -0.008955,
+            "ci95": [
+              -0.024627,
+              0.004478
+            ],
+            "p_value": 0.2929,
+            "prob_a_better": 0.1201
+          }
+        },
+        "mcnemar": {
+          "recall@1": {
+            "b": 0,
+            "c": 0,
+            "n_discordant": 0,
+            "p_value": 1.0,
+            "net_questions": 0,
+            "config_wins": 0,
+            "ref_wins": 0
+          },
+          "recall@5": {
+            "b": 2,
+            "c": 2,
+            "n_discordant": 4,
+            "p_value": 1.0,
+            "net_questions": 0,
+            "config_wins": 2,
+            "ref_wins": 2
+          },
+          "recall@10": {
+            "b": 0,
+            "c": 3,
+            "n_discordant": 3,
+            "p_value": 0.25,
+            "net_questions": -3,
+            "config_wins": 0,
+            "ref_wins": 3
+          }
+        },
+        "mode": "paper",
+        "guarantee_k": 6
+      },
+      "Bottom-up (g=8)": {
+        "metrics": {
+          "recall@1": {
+            "label": "Recall@1",
+            "config_value": 0.4179,
+            "ref_value": 0.4179,
+            "n": 67,
+            "mean_diff": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "p_value": 1.0,
+            "prob_a_better": 0.0
+          },
+          "recall@3": {
+            "label": "Recall@3",
+            "config_value": 0.7388,
+            "ref_value": 0.7463,
+            "n": 67,
+            "mean_diff": -0.007463,
+            "ci95": [
+              -0.022388,
+              0.0
+            ],
+            "p_value": 0.6286,
+            "prob_a_better": 0.0
+          },
+          "recall@5": {
+            "label": "Recall@5",
+            "config_value": 0.8134,
+            "ref_value": 0.8284,
+            "n": 67,
+            "mean_diff": -0.014925,
+            "ci95": [
+              -0.037313,
+              0.0
+            ],
+            "p_value": 0.2678,
+            "prob_a_better": 0.0
+          },
+          "recall@10": {
+            "label": "Recall@10",
+            "config_value": 0.9328,
+            "ref_value": 0.9627,
+            "n": 67,
+            "mean_diff": -0.029851,
+            "ci95": [
+              -0.059701,
+              -0.007463
+            ],
+            "p_value": 0.0642,
+            "prob_a_better": 0.0
+          },
+          "score": {
+            "label": "Composite score",
+            "config_value": 0.691044776119403,
+            "ref_value": 0.7044776119402985,
+            "n": 67,
+            "mean_diff": -0.013433,
+            "ci95": [
+              -0.029104,
+              -0.002239
+            ],
+            "p_value": 0.0659,
+            "prob_a_better": 0.0
+          }
+        },
+        "mcnemar": {
+          "recall@1": {
+            "b": 0,
+            "c": 0,
+            "n_discordant": 0,
+            "p_value": 1.0,
+            "net_questions": 0,
+            "config_wins": 0,
+            "ref_wins": 0
+          },
+          "recall@5": {
+            "b": 0,
+            "c": 1,
+            "n_discordant": 1,
+            "p_value": 1.0,
+            "net_questions": -1,
+            "config_wins": 0,
+            "ref_wins": 1
+          },
+          "recall@10": {
+            "b": 0,
+            "c": 3,
+            "n_discordant": 3,
+            "p_value": 0.25,
+            "net_questions": -3,
+            "config_wins": 0,
+            "ref_wins": 3
+          }
+        },
+        "mode": "paper",
+        "guarantee_k": 8
+      },
+      "Reserved-slot (g=2)": {
+        "metrics": {
+          "recall@1": {
+            "label": "Recall@1",
+            "config_value": 0.4179,
+            "ref_value": 0.4179,
+            "n": 67,
+            "mean_diff": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "p_value": 1.0,
+            "prob_a_better": 0.0
+          },
+          "recall@3": {
+            "label": "Recall@3",
+            "config_value": 0.7463,
+            "ref_value": 0.7463,
+            "n": 67,
+            "mean_diff": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "p_value": 1.0,
+            "prob_a_better": 0.0
+          },
+          "recall@5": {
+            "label": "Recall@5",
+            "config_value": 0.8284,
+            "ref_value": 0.8284,
+            "n": 67,
+            "mean_diff": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "p_value": 1.0,
+            "prob_a_better": 0.0
+          },
+          "recall@10": {
+            "label": "Recall@10",
+            "config_value": 0.9627,
+            "ref_value": 0.9627,
+            "n": 67,
+            "mean_diff": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "p_value": 1.0,
+            "prob_a_better": 0.0
+          },
+          "score": {
+            "label": "Composite score",
+            "config_value": 0.7044776119402985,
+            "ref_value": 0.7044776119402985,
+            "n": 67,
+            "mean_diff": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "p_value": 1.0,
+            "prob_a_better": 0.0
+          }
+        },
+        "mcnemar": {
+          "recall@1": {
+            "b": 0,
+            "c": 0,
+            "n_discordant": 0,
+            "p_value": 1.0,
+            "net_questions": 0,
+            "config_wins": 0,
+            "ref_wins": 0
+          },
+          "recall@5": {
+            "b": 0,
+            "c": 0,
+            "n_discordant": 0,
+            "p_value": 1.0,
+            "net_questions": 0,
+            "config_wins": 0,
+            "ref_wins": 0
+          },
+          "recall@10": {
+            "b": 0,
+            "c": 0,
+            "n_discordant": 0,
+            "p_value": 1.0,
+            "net_questions": 0,
+            "config_wins": 0,
+            "ref_wins": 0
+          }
+        },
+        "mode": "reserved",
+        "guarantee_k": 2
+      },
+      "Reserved-slot (g=4)": {
+        "metrics": {
+          "recall@1": {
+            "label": "Recall@1",
+            "config_value": 0.4179,
+            "ref_value": 0.4179,
+            "n": 67,
+            "mean_diff": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "p_value": 1.0,
+            "prob_a_better": 0.0
+          },
+          "recall@3": {
+            "label": "Recall@3",
+            "config_value": 0.7463,
+            "ref_value": 0.7463,
+            "n": 67,
+            "mean_diff": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "p_value": 1.0,
+            "prob_a_better": 0.0
+          },
+          "recall@5": {
+            "label": "Recall@5",
+            "config_value": 0.8284,
+            "ref_value": 0.8284,
+            "n": 67,
+            "mean_diff": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "p_value": 1.0,
+            "prob_a_better": 0.0
+          },
+          "recall@10": {
+            "label": "Recall@10",
+            "config_value": 0.9552,
+            "ref_value": 0.9627,
+            "n": 67,
+            "mean_diff": -0.007463,
+            "ci95": [
+              -0.022388,
+              0.0
+            ],
+            "p_value": 0.6375,
+            "prob_a_better": 0.0
+          },
+          "score": {
+            "label": "Composite score",
+            "config_value": 0.7022388059701492,
+            "ref_value": 0.7044776119402985,
+            "n": 67,
+            "mean_diff": -0.002239,
+            "ci95": [
+              -0.006716,
+              0.0
+            ],
+            "p_value": 0.6375,
+            "prob_a_better": 0.0
+          }
+        },
+        "mcnemar": {
+          "recall@1": {
+            "b": 0,
+            "c": 0,
+            "n_discordant": 0,
+            "p_value": 1.0,
+            "net_questions": 0,
+            "config_wins": 0,
+            "ref_wins": 0
+          },
+          "recall@5": {
+            "b": 0,
+            "c": 0,
+            "n_discordant": 0,
+            "p_value": 1.0,
+            "net_questions": 0,
+            "config_wins": 0,
+            "ref_wins": 0
+          },
+          "recall@10": {
+            "b": 0,
+            "c": 1,
+            "n_discordant": 1,
+            "p_value": 1.0,
+            "net_questions": -1,
+            "config_wins": 0,
+            "ref_wins": 1
+          }
+        },
+        "mode": "reserved",
+        "guarantee_k": 4
+      },
+      "Reserved-slot (g=6)": {
+        "metrics": {
+          "recall@1": {
+            "label": "Recall@1",
+            "config_value": 0.4179,
+            "ref_value": 0.4179,
+            "n": 67,
+            "mean_diff": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "p_value": 1.0,
+            "prob_a_better": 0.0
+          },
+          "recall@3": {
+            "label": "Recall@3",
+            "config_value": 0.7463,
+            "ref_value": 0.7463,
+            "n": 67,
+            "mean_diff": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "p_value": 1.0,
+            "prob_a_better": 0.0
+          },
+          "recall@5": {
+            "label": "Recall@5",
+            "config_value": 0.8284,
+            "ref_value": 0.8284,
+            "n": 67,
+            "mean_diff": 0.0,
+            "ci95": [
+              -0.029851,
+              0.029851
+            ],
+            "p_value": 1.0,
+            "prob_a_better": 0.3886
+          },
+          "recall@10": {
+            "label": "Recall@10",
+            "config_value": 0.9403,
+            "ref_value": 0.9627,
+            "n": 67,
+            "mean_diff": -0.022388,
+            "ci95": [
+              -0.052239,
+              0.0
+            ],
+            "p_value": 0.1235,
+            "prob_a_better": 0.0
+          },
+          "score": {
+            "label": "Composite score",
+            "config_value": 0.6977611940298507,
+            "ref_value": 0.7044776119402985,
+            "n": 67,
+            "mean_diff": -0.006716,
+            "ci95": [
+              -0.022388,
+              0.006716
+            ],
+            "p_value": 0.4052,
+            "prob_a_better": 0.1704
+          }
+        },
+        "mcnemar": {
+          "recall@1": {
+            "b": 0,
+            "c": 0,
+            "n_discordant": 0,
+            "p_value": 1.0,
+            "net_questions": 0,
+            "config_wins": 0,
+            "ref_wins": 0
+          },
+          "recall@5": {
+            "b": 2,
+            "c": 2,
+            "n_discordant": 4,
+            "p_value": 1.0,
+            "net_questions": 0,
+            "config_wins": 2,
+            "ref_wins": 2
+          },
+          "recall@10": {
+            "b": 0,
+            "c": 3,
+            "n_discordant": 3,
+            "p_value": 0.25,
+            "net_questions": -3,
+            "config_wins": 0,
+            "ref_wins": 3
+          }
+        },
+        "mode": "reserved",
+        "guarantee_k": 6
+      },
+      "Reserved-slot (g=8)": {
+        "metrics": {
+          "recall@1": {
+            "label": "Recall@1",
+            "config_value": 0.4179,
+            "ref_value": 0.4179,
+            "n": 67,
+            "mean_diff": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "p_value": 1.0,
+            "prob_a_better": 0.0
+          },
+          "recall@3": {
+            "label": "Recall@3",
+            "config_value": 0.7313,
+            "ref_value": 0.7463,
+            "n": 67,
+            "mean_diff": -0.014925,
+            "ci95": [
+              -0.044776,
+              0.014925
+            ],
+            "p_value": 0.438,
+            "prob_a_better": 0.0931
+          },
+          "recall@5": {
+            "label": "Recall@5",
+            "config_value": 0.7836,
+            "ref_value": 0.8284,
+            "n": 67,
+            "mean_diff": -0.044776,
+            "ci95": [
+              -0.089552,
+              -0.007463
+            ],
+            "p_value": 0.0425,
+            "prob_a_better": 0.0049
+          },
+          "recall@10": {
+            "label": "Recall@10",
+            "config_value": 0.8731,
+            "ref_value": 0.9627,
+            "n": 67,
+            "mean_diff": -0.089552,
+            "ci95": [
+              -0.134328,
+              -0.044776
+            ],
+            "p_value": 0.0003,
+            "prob_a_better": 0.0
+          },
+          "score": {
+            "label": "Composite score",
+            "config_value": 0.6641791044776119,
+            "ref_value": 0.7044776119402985,
+            "n": 67,
+            "mean_diff": -0.040299,
+            "ci95": [
+              -0.064925,
+              -0.01791
+            ],
+            "p_value": 0.0018,
+            "prob_a_better": 0.0
+          }
+        },
+        "mcnemar": {
+          "recall@1": {
+            "b": 0,
+            "c": 0,
+            "n_discordant": 0,
+            "p_value": 1.0,
+            "net_questions": 0,
+            "config_wins": 0,
+            "ref_wins": 0
+          },
+          "recall@5": {
+            "b": 1,
+            "c": 6,
+            "n_discordant": 7,
+            "p_value": 0.125,
+            "net_questions": -5,
+            "config_wins": 1,
+            "ref_wins": 6
+          },
+          "recall@10": {
+            "b": 0,
+            "c": 11,
+            "n_discordant": 11,
+            "p_value": 0.000977,
+            "net_questions": -11,
+            "config_wins": 0,
+            "ref_wins": 11
+          }
+        },
+        "mode": "reserved",
+        "guarantee_k": 8
+      }
+    }
+  },
+  "weights": {
+    "reference": {
+      "w_v": 0.4,
+      "w_g": 0.6
+    },
+    "reference_note": "sweep row carrying the deployed dense weight (w_v = 0.4); the deployed pair (0.4, 0.5) is not on the w_v + w_g = 1 grid used by the sweep",
+    "comparisons": {
+      "w_v=1.0,w_g=0.0": {
+        "metrics": {
+          "recall@1": {
+            "label": "Recall@1",
+            "config_value": 0.403,
+            "ref_value": 0.4328,
+            "n": 67,
+            "mean_diff": -0.029851,
+            "ci95": [
+              -0.067164,
+              0.0
+            ],
+            "p_value": 0.1383,
+            "prob_a_better": 0.0229
+          },
+          "recall@3": {
+            "label": "Recall@3",
+            "config_value": 0.6418,
+            "ref_value": 0.7463,
+            "n": 67,
+            "mean_diff": -0.104478,
+            "ci95": [
+              -0.164179,
+              -0.052239
+            ],
+            "p_value": 0.0006,
+            "prob_a_better": 0.0001
+          },
+          "recall@5": {
+            "label": "Recall@5",
+            "config_value": 0.7164,
+            "ref_value": 0.8284,
+            "n": 67,
+            "mean_diff": -0.11194,
+            "ci95": [
+              -0.164179,
+              -0.059701
+            ],
+            "p_value": 0.0002,
+            "prob_a_better": 0.0
+          },
+          "recall@10": {
+            "label": "Recall@10",
+            "config_value": 0.8134,
+            "ref_value": 0.9627,
+            "n": 67,
+            "mean_diff": -0.149254,
+            "ci95": [
+              -0.208955,
+              -0.089552
+            ],
+            "p_value": 0.0,
+            "prob_a_better": 0.0
+          },
+          "score": {
+            "label": "Composite score",
+            "config_value": 0.6201492537313432,
+            "ref_value": 0.7104477611940297,
+            "n": 67,
+            "mean_diff": -0.090299,
+            "ci95": [
+              -0.125373,
+              -0.057463
+            ],
+            "p_value": 0.0,
+            "prob_a_better": 0.0
+          }
+        },
+        "mcnemar": {
+          "recall@1": {
+            "b": 0,
+            "c": 0,
+            "n_discordant": 0,
+            "p_value": 1.0,
+            "net_questions": 0,
+            "config_wins": 0,
+            "ref_wins": 0
+          },
+          "recall@5": {
+            "b": 1,
+            "c": 15,
+            "n_discordant": 16,
+            "p_value": 0.000519,
+            "net_questions": -14,
+            "config_wins": 1,
+            "ref_wins": 15
+          },
+          "recall@10": {
+            "b": 0,
+            "c": 19,
+            "n_discordant": 19,
+            "p_value": 4e-06,
+            "net_questions": -19,
+            "config_wins": 0,
+            "ref_wins": 19
+          }
+        }
+      },
+      "w_v=0.8,w_g=0.2": {
+        "metrics": {
+          "recall@1": {
+            "label": "Recall@1",
+            "config_value": 0.4254,
+            "ref_value": 0.4328,
+            "n": 67,
+            "mean_diff": -0.007463,
+            "ci95": [
+              -0.029851,
+              0.014925
+            ],
+            "p_value": 0.7567,
+            "prob_a_better": 0.182
+          },
+          "recall@3": {
+            "label": "Recall@3",
+            "config_value": 0.7015,
+            "ref_value": 0.7463,
+            "n": 67,
+            "mean_diff": -0.044776,
+            "ci95": [
+              -0.097015,
+              0.0
+            ],
+            "p_value": 0.1023,
+            "prob_a_better": 0.0247
+          },
+          "recall@5": {
+            "label": "Recall@5",
+            "config_value": 0.7612,
+            "ref_value": 0.8284,
+            "n": 67,
+            "mean_diff": -0.067164,
+            "ci95": [
+              -0.11194,
+              -0.022388
+            ],
+            "p_value": 0.0057,
+            "prob_a_better": 0.0006
+          },
+          "recall@10": {
+            "label": "Recall@10",
+            "config_value": 0.8806,
+            "ref_value": 0.9627,
+            "n": 67,
+            "mean_diff": -0.08209,
+            "ci95": [
+              -0.126866,
+              -0.037313
+            ],
+            "p_value": 0.0005,
+            "prob_a_better": 0.0
+          },
+          "score": {
+            "label": "Composite score",
+            "config_value": 0.6626865671641791,
+            "ref_value": 0.7104477611940297,
+            "n": 67,
+            "mean_diff": -0.047761,
+            "ci95": [
+              -0.072388,
+              -0.023881
+            ],
+            "p_value": 0.0004,
+            "prob_a_better": 0.0
+          }
+        },
+        "mcnemar": {
+          "recall@1": {
+            "b": 0,
+            "c": 0,
+            "n_discordant": 0,
+            "p_value": 1.0,
+            "net_questions": 0,
+            "config_wins": 0,
+            "ref_wins": 0
+          },
+          "recall@5": {
+            "b": 1,
+            "c": 9,
+            "n_discordant": 10,
+            "p_value": 0.021484,
+            "net_questions": -8,
+            "config_wins": 1,
+            "ref_wins": 9
+          },
+          "recall@10": {
+            "b": 0,
+            "c": 11,
+            "n_discordant": 11,
+            "p_value": 0.000977,
+            "net_questions": -11,
+            "config_wins": 0,
+            "ref_wins": 11
+          }
+        }
+      },
+      "w_v=0.6,w_g=0.4": {
+        "metrics": {
+          "recall@1": {
+            "label": "Recall@1",
+            "config_value": 0.4403,
+            "ref_value": 0.4328,
+            "n": 67,
+            "mean_diff": 0.007463,
+            "ci95": [
+              0.0,
+              0.022388
+            ],
+            "p_value": 0.63,
+            "prob_a_better": 0.6355
+          },
+          "recall@3": {
+            "label": "Recall@3",
+            "config_value": 0.7313,
+            "ref_value": 0.7463,
+            "n": 67,
+            "mean_diff": -0.014925,
+            "ci95": [
+              -0.044776,
+              0.014925
+            ],
+            "p_value": 0.4391,
+            "prob_a_better": 0.0937
+          },
+          "recall@5": {
+            "label": "Recall@5",
+            "config_value": 0.806,
+            "ref_value": 0.8284,
+            "n": 67,
+            "mean_diff": -0.022388,
+            "ci95": [
+              -0.059701,
+              0.007463
+            ],
+            "p_value": 0.2417,
+            "prob_a_better": 0.0455
+          },
+          "recall@10": {
+            "label": "Recall@10",
+            "config_value": 0.9403,
+            "ref_value": 0.9627,
+            "n": 67,
+            "mean_diff": -0.022388,
+            "ci95": [
+              -0.052239,
+              0.0
+            ],
+            "p_value": 0.1335,
+            "prob_a_better": 0.0
+          },
+          "score": {
+            "label": "Composite score",
+            "config_value": 0.7,
+            "ref_value": 0.7104477611940297,
+            "n": 67,
+            "mean_diff": -0.010448,
+            "ci95": [
+              -0.024627,
+              0.002985
+            ],
+            "p_value": 0.1334,
+            "prob_a_better": 0.0592
+          }
+        },
+        "mcnemar": {
+          "recall@1": {
+            "b": 0,
+            "c": 0,
+            "n_discordant": 0,
+            "p_value": 1.0,
+            "net_questions": 0,
+            "config_wins": 0,
+            "ref_wins": 0
+          },
+          "recall@5": {
+            "b": 1,
+            "c": 4,
+            "n_discordant": 5,
+            "p_value": 0.375,
+            "net_questions": -3,
+            "config_wins": 1,
+            "ref_wins": 4
+          },
+          "recall@10": {
+            "b": 0,
+            "c": 3,
+            "n_discordant": 3,
+            "p_value": 0.25,
+            "net_questions": -3,
+            "config_wins": 0,
+            "ref_wins": 3
+          }
+        }
+      },
+      "w_v=0.5,w_g=0.5": {
+        "metrics": {
+          "recall@1": {
+            "label": "Recall@1",
+            "config_value": 0.4403,
+            "ref_value": 0.4328,
+            "n": 67,
+            "mean_diff": 0.007463,
+            "ci95": [
+              0.0,
+              0.022388
+            ],
+            "p_value": 0.63,
+            "prob_a_better": 0.6355
+          },
+          "recall@3": {
+            "label": "Recall@3",
+            "config_value": 0.7313,
+            "ref_value": 0.7463,
+            "n": 67,
+            "mean_diff": -0.014925,
+            "ci95": [
+              -0.037313,
+              0.0
+            ],
+            "p_value": 0.2685,
+            "prob_a_better": 0.0
+          },
+          "recall@5": {
+            "label": "Recall@5",
+            "config_value": 0.806,
+            "ref_value": 0.8284,
+            "n": 67,
+            "mean_diff": -0.022388,
+            "ci95": [
+              -0.052239,
+              0.0
+            ],
+            "p_value": 0.1181,
+            "prob_a_better": 0.0
+          },
+          "recall@10": {
+            "label": "Recall@10",
+            "config_value": 0.9552,
+            "ref_value": 0.9627,
+            "n": 67,
+            "mean_diff": -0.007463,
+            "ci95": [
+              -0.022388,
+              0.0
+            ],
+            "p_value": 0.6303,
+            "prob_a_better": 0.0
+          },
+          "score": {
+            "label": "Composite score",
+            "config_value": 0.7044776119402985,
+            "ref_value": 0.7104477611940297,
+            "n": 67,
+            "mean_diff": -0.00597,
+            "ci95": [
+              -0.015672,
+              0.004478
+            ],
+            "p_value": 0.2466,
+            "prob_a_better": 0.1183
+          }
+        },
+        "mcnemar": {
+          "recall@1": {
+            "b": 0,
+            "c": 0,
+            "n_discordant": 0,
+            "p_value": 1.0,
+            "net_questions": 0,
+            "config_wins": 0,
+            "ref_wins": 0
+          },
+          "recall@5": {
+            "b": 0,
+            "c": 3,
+            "n_discordant": 3,
+            "p_value": 0.25,
+            "net_questions": -3,
+            "config_wins": 0,
+            "ref_wins": 3
+          },
+          "recall@10": {
+            "b": 0,
+            "c": 1,
+            "n_discordant": 1,
+            "p_value": 1.0,
+            "net_questions": -1,
+            "config_wins": 0,
+            "ref_wins": 1
+          }
+        }
+      },
+      "w_v=0.2,w_g=0.8": {
+        "metrics": {
+          "recall@1": {
+            "label": "Recall@1",
+            "config_value": 0.4254,
+            "ref_value": 0.4328,
+            "n": 67,
+            "mean_diff": -0.007463,
+            "ci95": [
+              -0.022388,
+              0.0
+            ],
+            "p_value": 0.6208,
+            "prob_a_better": 0.0
+          },
+          "recall@3": {
+            "label": "Recall@3",
+            "config_value": 0.7537,
+            "ref_value": 0.7463,
+            "n": 67,
+            "mean_diff": 0.007463,
+            "ci95": [
+              -0.014925,
+              0.037313
+            ],
+            "p_value": 0.7634,
+            "prob_a_better": 0.6057
+          },
+          "recall@5": {
+            "label": "Recall@5",
+            "config_value": 0.8507,
+            "ref_value": 0.8284,
+            "n": 67,
+            "mean_diff": 0.022388,
+            "ci95": [
+              -0.007463,
+              0.059701
+            ],
+            "p_value": 0.2516,
+            "prob_a_better": 0.8788
+          },
+          "recall@10": {
+            "label": "Recall@10",
+            "config_value": 0.9627,
+            "ref_value": 0.9627,
+            "n": 67,
+            "mean_diff": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "p_value": 1.0,
+            "prob_a_better": 0.0
+          },
+          "score": {
+            "label": "Composite score",
+            "config_value": 0.7141791044776119,
+            "ref_value": 0.7104477611940297,
+            "n": 67,
+            "mean_diff": 0.003731,
+            "ci95": [
+              -0.008209,
+              0.015672
+            ],
+            "p_value": 0.5032,
+            "prob_a_better": 0.7527
+          }
+        },
+        "mcnemar": {
+          "recall@1": {
+            "b": 0,
+            "c": 0,
+            "n_discordant": 0,
+            "p_value": 1.0,
+            "net_questions": 0,
+            "config_wins": 0,
+            "ref_wins": 0
+          },
+          "recall@5": {
+            "b": 4,
+            "c": 1,
+            "n_discordant": 5,
+            "p_value": 0.375,
+            "net_questions": 3,
+            "config_wins": 4,
+            "ref_wins": 1
+          },
+          "recall@10": {
+            "b": 0,
+            "c": 0,
+            "n_discordant": 0,
+            "p_value": 1.0,
+            "net_questions": 0,
+            "config_wins": 0,
+            "ref_wins": 0
+          }
+        }
+      },
+      "w_v=0.0,w_g=1.0": {
+        "metrics": {
+          "recall@1": {
+            "label": "Recall@1",
+            "config_value": 0.4403,
+            "ref_value": 0.4328,
+            "n": 67,
+            "mean_diff": 0.007463,
+            "ci95": [
+              -0.014925,
+              0.037313
+            ],
+            "p_value": 0.7603,
+            "prob_a_better": 0.6053
+          },
+          "recall@3": {
+            "label": "Recall@3",
+            "config_value": 0.7388,
+            "ref_value": 0.7463,
+            "n": 67,
+            "mean_diff": -0.007463,
+            "ci95": [
+              -0.067164,
+              0.052239
+            ],
+            "p_value": 0.9064,
+            "prob_a_better": 0.3638
+          },
+          "recall@5": {
+            "label": "Recall@5",
+            "config_value": 0.8657,
+            "ref_value": 0.8284,
+            "n": 67,
+            "mean_diff": 0.037313,
+            "ci95": [
+              -0.007463,
+              0.08209
+            ],
+            "p_value": 0.1269,
+            "prob_a_better": 0.9423
+          },
+          "recall@10": {
+            "label": "Recall@10",
+            "config_value": 0.9627,
+            "ref_value": 0.9627,
+            "n": 67,
+            "mean_diff": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "p_value": 1.0,
+            "prob_a_better": 0.0
+          },
+          "score": {
+            "label": "Composite score",
+            "config_value": 0.7246268656716417,
+            "ref_value": 0.7104477611940297,
+            "n": 67,
+            "mean_diff": 0.014179,
+            "ci95": [
+              0.0,
+              0.029104
+            ],
+            "p_value": 0.0585,
+            "prob_a_better": 0.9759
+          }
+        },
+        "mcnemar": {
+          "recall@1": {
+            "b": 0,
+            "c": 0,
+            "n_discordant": 0,
+            "p_value": 1.0,
+            "net_questions": 0,
+            "config_wins": 0,
+            "ref_wins": 0
+          },
+          "recall@5": {
+            "b": 7,
+            "c": 2,
+            "n_discordant": 9,
+            "p_value": 0.179688,
+            "net_questions": 5,
+            "config_wins": 7,
+            "ref_wins": 2
+          },
+          "recall@10": {
+            "b": 0,
+            "c": 0,
+            "n_discordant": 0,
+            "p_value": 1.0,
+            "net_questions": 0,
+            "config_wins": 0,
+            "ref_wins": 0
+          }
+        }
+      }
+    },
+    "named": {
+      "wg_0.8_to_1.0": {
+        "description": "step w_g = 0.8 -> w_g = 1.0; Delta = (w_g=1.0) - (w_g=0.8)",
+        "metrics": {
+          "recall@1": {
+            "label": "Recall@1",
+            "config_value": 0.4403,
+            "ref_value": 0.4254,
+            "n": 67,
+            "mean_diff": 0.014925,
+            "ci95": [
+              0.0,
+              0.037313
+            ],
+            "p_value": 0.2734,
+            "prob_a_better": 0.8644
+          },
+          "recall@3": {
+            "label": "Recall@3",
+            "config_value": 0.7388,
+            "ref_value": 0.7537,
+            "n": 67,
+            "mean_diff": -0.014925,
+            "ci95": [
+              -0.067164,
+              0.037313
+            ],
+            "p_value": 0.6661,
+            "prob_a_better": 0.2294
+          },
+          "recall@5": {
+            "label": "Recall@5",
+            "config_value": 0.8657,
+            "ref_value": 0.8507,
+            "n": 67,
+            "mean_diff": 0.014925,
+            "ci95": [
+              -0.014925,
+              0.044776
+            ],
+            "p_value": 0.4524,
+            "prob_a_better": 0.7727
+          },
+          "recall@10": {
+            "label": "Recall@10",
+            "config_value": 0.9627,
+            "ref_value": 0.9627,
+            "n": 67,
+            "mean_diff": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "p_value": 1.0,
+            "prob_a_better": 0.0
+          },
+          "score": {
+            "label": "Composite score",
+            "config_value": 0.7246268656716417,
+            "ref_value": 0.7141791044776119,
+            "n": 67,
+            "mean_diff": 0.010448,
+            "ci95": [
+              -0.0,
+              0.023134
+            ],
+            "p_value": 0.0949,
+            "prob_a_better": 0.9591
+          }
+        },
+        "mcnemar": {
+          "recall@1": {
+            "b": 0,
+            "c": 0,
+            "n_discordant": 0,
+            "p_value": 1.0,
+            "net_questions": 0,
+            "config_wins": 0,
+            "ref_wins": 0
+          },
+          "recall@5": {
+            "b": 3,
+            "c": 1,
+            "n_discordant": 4,
+            "p_value": 0.625,
+            "net_questions": 2,
+            "config_wins": 3,
+            "ref_wins": 1
+          },
+          "recall@10": {
+            "b": 0,
+            "c": 0,
+            "n_discordant": 0,
+            "p_value": 1.0,
+            "net_questions": 0,
+            "config_wins": 0,
+            "ref_wins": 0
+          }
+        }
+      },
+      "r1_range": {
+        "min": {
+          "w_v": 1.0,
+          "w_g": 0.0,
+          "value": 0.403
+        },
+        "max": {
+          "w_v": 0.6,
+          "w_g": 0.4,
+          "value": 0.4403
+        },
+        "spread_pp": 3.73,
+        "max_se_pp": 2.434,
+        "description": "R@1 spread across the whole weight sweep"
+      },
+      "plateau": {
+        "description": "plateau check; Delta = (row) - (w_g=0.6 row)",
+        "metrics": {
+          "w_g=0.8|recall@10": {
+            "label": "Recall@10",
+            "config_value": 0.9627,
+            "ref_value": 0.9627,
+            "n": 67,
+            "mean_diff": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "p_value": 1.0,
+            "prob_a_better": 0.0
+          },
+          "w_g=0.8|score": {
+            "label": "Composite score",
+            "config_value": 0.7141791044776119,
+            "ref_value": 0.7104477611940297,
+            "n": 67,
+            "mean_diff": 0.003731,
+            "ci95": [
+              -0.008209,
+              0.015672
+            ],
+            "p_value": 0.5032,
+            "prob_a_better": 0.7527
+          },
+          "w_g=1.0|recall@10": {
+            "label": "Recall@10",
+            "config_value": 0.9627,
+            "ref_value": 0.9627,
+            "n": 67,
+            "mean_diff": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "p_value": 1.0,
+            "prob_a_better": 0.0
+          },
+          "w_g=1.0|score": {
+            "label": "Composite score",
+            "config_value": 0.7246268656716417,
+            "ref_value": 0.7104477611940297,
+            "n": 67,
+            "mean_diff": 0.014179,
+            "ci95": [
+              0.0,
+              0.029104
+            ],
+            "p_value": 0.0585,
+            "prob_a_better": 0.9759
+          }
+        },
+        "mcnemar": {
+          "w_g=0.8|recall@10": {
+            "b": 0,
+            "c": 0,
+            "n_discordant": 0,
+            "p_value": 1.0,
+            "net_questions": 0,
+            "config_wins": 0,
+            "ref_wins": 0
+          },
+          "w_g=1.0|recall@10": {
+            "b": 0,
+            "c": 0,
+            "n_discordant": 0,
+            "p_value": 1.0,
+            "net_questions": 0,
+            "config_wins": 0,
+            "ref_wins": 0
+          }
+        }
+      },
+      "r10_monotonic_steps": {
+        "description": "stepwise Recall@10 change as w_g increases; Delta = (higher w_g) - (lower w_g)",
+        "steps": [
+          {
+            "from": "w_g=0.0",
+            "to": "w_g=0.2",
+            "delta_recall@10_pp": 6.72,
+            "p_recall@10": 0.003,
+            "mcnemar_recall@10": {
+              "b": 8,
+              "c": 0,
+              "n_discordant": 8,
+              "p_value": 0.007812,
+              "net_questions": 8,
+              "config_wins": 8,
+              "ref_wins": 0
+            }
+          },
+          {
+            "from": "w_g=0.2",
+            "to": "w_g=0.4",
+            "delta_recall@10_pp": 5.97,
+            "p_recall@10": 0.0042,
+            "mcnemar_recall@10": {
+              "b": 8,
+              "c": 0,
+              "n_discordant": 8,
+              "p_value": 0.007812,
+              "net_questions": 8,
+              "config_wins": 8,
+              "ref_wins": 0
+            }
+          },
+          {
+            "from": "w_g=0.4",
+            "to": "w_g=0.5",
+            "delta_recall@10_pp": 1.49,
+            "p_recall@10": 0.2723,
+            "mcnemar_recall@10": {
+              "b": 2,
+              "c": 0,
+              "n_discordant": 2,
+              "p_value": 0.5,
+              "net_questions": 2,
+              "config_wins": 2,
+              "ref_wins": 0
+            }
+          },
+          {
+            "from": "w_g=0.5",
+            "to": "w_g=0.6",
+            "delta_recall@10_pp": 0.75,
+            "p_recall@10": 0.6303,
+            "mcnemar_recall@10": {
+              "b": 1,
+              "c": 0,
+              "n_discordant": 1,
+              "p_value": 1.0,
+              "net_questions": 1,
+              "config_wins": 1,
+              "ref_wins": 0
+            }
+          },
+          {
+            "from": "w_g=0.6",
+            "to": "w_g=0.8",
+            "delta_recall@10_pp": 0.0,
+            "p_recall@10": 1.0,
+            "mcnemar_recall@10": {
+              "b": 0,
+              "c": 0,
+              "n_discordant": 0,
+              "p_value": 1.0,
+              "net_questions": 0,
+              "config_wins": 0,
+              "ref_wins": 0
+            }
+          },
+          {
+            "from": "w_g=0.8",
+            "to": "w_g=1.0",
+            "delta_recall@10_pp": 0.0,
+            "p_recall@10": 1.0,
+            "mcnemar_recall@10": {
+              "b": 0,
+              "c": 0,
+              "n_discordant": 0,
+              "p_value": 1.0,
+              "net_questions": 0,
+              "config_wins": 0,
+              "ref_wins": 0
+            }
+          }
+        ]
+      },
+      "wg_0.8_to_1.0_v1_vs_v4": {
+        "description": "the w_g = 0.8 -> 1.0 step, in the submitted version and in the present version; Delta = (w_g=1.0) - (w_g=0.8), so a negative value is a drop",
+        "v1_delta_pp": {
+          "recall@1": -2.0,
+          "recall@3": -2.0,
+          "recall@5": -2.0,
+          "recall@10": -2.0
+        },
+        "v4_delta_pp": {
+          "recall@1": 1.49,
+          "recall@3": -1.49,
+          "recall@5": 1.49,
+          "recall@10": 0.0
+        },
+        "v4_p": {
+          "recall@1": 0.2734,
+          "recall@3": 0.6661,
+          "recall@5": 0.4524,
+          "recall@10": 1.0
+        }
+      }
+    }
+  },
+  "keyword": {
+    "reference": "No Keyword Scoring",
+    "comparisons": {
+      "Position only": {
+        "metrics": {
+          "recall@1": {
+            "label": "Recall@1",
+            "config_value": 0.4179,
+            "ref_value": 0.4403,
+            "n": 67,
+            "mean_diff": -0.022388,
+            "ci95": [
+              -0.052239,
+              0.0
+            ],
+            "p_value": 0.1269,
+            "prob_a_better": 0.0
+          },
+          "recall@3": {
+            "label": "Recall@3",
+            "config_value": 0.7388,
+            "ref_value": 0.7388,
+            "n": 67,
+            "mean_diff": 0.0,
+            "ci95": [
+              -0.022388,
+              0.022388
+            ],
+            "p_value": 1.0,
+            "prob_a_better": 0.3529
+          },
+          "recall@5": {
+            "label": "Recall@5",
+            "config_value": 0.8284,
+            "ref_value": 0.8284,
+            "n": 67,
+            "mean_diff": 0.0,
+            "ci95": [
+              -0.029851,
+              0.029851
+            ],
+            "p_value": 1.0,
+            "prob_a_better": 0.4033
+          },
+          "recall@10": {
+            "label": "Recall@10",
+            "config_value": 0.9627,
+            "ref_value": 0.9627,
+            "n": 67,
+            "mean_diff": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "p_value": 1.0,
+            "prob_a_better": 0.0
+          },
+          "score": {
+            "label": "Composite score",
+            "config_value": 0.7044776119402985,
+            "ref_value": 0.7134328358208955,
+            "n": 67,
+            "mean_diff": -0.008955,
+            "ci95": [
+              -0.022388,
+              0.003731
+            ],
+            "p_value": 0.1933,
+            "prob_a_better": 0.078
+          }
+        },
+        "mcnemar": {
+          "recall@1": {
+            "b": 0,
+            "c": 0,
+            "n_discordant": 0,
+            "p_value": 1.0,
+            "net_questions": 0,
+            "config_wins": 0,
+            "ref_wins": 0
+          },
+          "recall@5": {
+            "b": 2,
+            "c": 2,
+            "n_discordant": 4,
+            "p_value": 1.0,
+            "net_questions": 0,
+            "config_wins": 2,
+            "ref_wins": 2
+          },
+          "recall@10": {
+            "b": 0,
+            "c": 0,
+            "n_discordant": 0,
+            "p_value": 1.0,
+            "net_questions": 0,
+            "config_wins": 0,
+            "ref_wins": 0
+          }
+        }
+      },
+      "Count only": {
+        "metrics": {
+          "recall@1": {
+            "label": "Recall@1",
+            "config_value": 0.4179,
+            "ref_value": 0.4403,
+            "n": 67,
+            "mean_diff": -0.022388,
+            "ci95": [
+              -0.052239,
+              0.0
+            ],
+            "p_value": 0.1228,
+            "prob_a_better": 0.0
+          },
+          "recall@3": {
+            "label": "Recall@3",
+            "config_value": 0.7388,
+            "ref_value": 0.7388,
+            "n": 67,
+            "mean_diff": 0.0,
+            "ci95": [
+              -0.029851,
+              0.029851
+            ],
+            "p_value": 1.0,
+            "prob_a_better": 0.3954
+          },
+          "recall@5": {
+            "label": "Recall@5",
+            "config_value": 0.8209,
+            "ref_value": 0.8284,
+            "n": 67,
+            "mean_diff": -0.007463,
+            "ci95": [
+              -0.037313,
+              0.022388
+            ],
+            "p_value": 0.8125,
+            "prob_a_better": 0.2518
+          },
+          "recall@10": {
+            "label": "Recall@10",
+            "config_value": 0.9627,
+            "ref_value": 0.9627,
+            "n": 67,
+            "mean_diff": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "p_value": 1.0,
+            "prob_a_better": 0.0
+          },
+          "score": {
+            "label": "Composite score",
+            "config_value": 0.7022388059701492,
+            "ref_value": 0.7134328358208955,
+            "n": 67,
+            "mean_diff": -0.011194,
+            "ci95": [
+              -0.027612,
+              0.003731
+            ],
+            "p_value": 0.1644,
+            "prob_a_better": 0.0686
+          }
+        },
+        "mcnemar": {
+          "recall@1": {
+            "b": 0,
+            "c": 0,
+            "n_discordant": 0,
+            "p_value": 1.0,
+            "net_questions": 0,
+            "config_wins": 0,
+            "ref_wins": 0
+          },
+          "recall@5": {
+            "b": 2,
+            "c": 3,
+            "n_discordant": 5,
+            "p_value": 1.0,
+            "net_questions": -1,
+            "config_wins": 2,
+            "ref_wins": 3
+          },
+          "recall@10": {
+            "b": 0,
+            "c": 0,
+            "n_discordant": 0,
+            "p_value": 1.0,
+            "net_questions": 0,
+            "config_wins": 0,
+            "ref_wins": 0
+          }
+        }
+      },
+      "Position + Count": {
+        "metrics": {
+          "recall@1": {
+            "label": "Recall@1",
+            "config_value": 0.4179,
+            "ref_value": 0.4403,
+            "n": 67,
+            "mean_diff": -0.022388,
+            "ci95": [
+              -0.052239,
+              0.0
+            ],
+            "p_value": 0.1269,
+            "prob_a_better": 0.0
+          },
+          "recall@3": {
+            "label": "Recall@3",
+            "config_value": 0.7388,
+            "ref_value": 0.7388,
+            "n": 67,
+            "mean_diff": 0.0,
+            "ci95": [
+              -0.022388,
+              0.022388
+            ],
+            "p_value": 1.0,
+            "prob_a_better": 0.3521
+          },
+          "recall@5": {
+            "label": "Recall@5",
+            "config_value": 0.8284,
+            "ref_value": 0.8284,
+            "n": 67,
+            "mean_diff": 0.0,
+            "ci95": [
+              -0.029851,
+              0.029851
+            ],
+            "p_value": 1.0,
+            "prob_a_better": 0.4033
+          },
+          "recall@10": {
+            "label": "Recall@10",
+            "config_value": 0.9627,
+            "ref_value": 0.9627,
+            "n": 67,
+            "mean_diff": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "p_value": 1.0,
+            "prob_a_better": 0.0
+          },
+          "score": {
+            "label": "Composite score",
+            "config_value": 0.7044776119402985,
+            "ref_value": 0.7134328358208955,
+            "n": 67,
+            "mean_diff": -0.008955,
+            "ci95": [
+              -0.022388,
+              0.003731
+            ],
+            "p_value": 0.1933,
+            "prob_a_better": 0.078
+          }
+        },
+        "mcnemar": {
+          "recall@1": {
+            "b": 0,
+            "c": 0,
+            "n_discordant": 0,
+            "p_value": 1.0,
+            "net_questions": 0,
+            "config_wins": 0,
+            "ref_wins": 0
+          },
+          "recall@5": {
+            "b": 2,
+            "c": 2,
+            "n_discordant": 4,
+            "p_value": 1.0,
+            "net_questions": 0,
+            "config_wins": 2,
+            "ref_wins": 2
+          },
+          "recall@10": {
+            "b": 0,
+            "c": 0,
+            "n_discordant": 0,
+            "p_value": 1.0,
+            "net_questions": 0,
+            "config_wins": 0,
+            "ref_wins": 0
+          }
+        }
+      },
+      "Assoc-concept only": {
+        "metrics": {
+          "recall@1": {
+            "label": "Recall@1",
+            "config_value": 0.4478,
+            "ref_value": 0.4403,
+            "n": 67,
+            "mean_diff": 0.007463,
+            "ci95": [
+              0.0,
+              0.022388
+            ],
+            "p_value": 0.6355,
+            "prob_a_better": 0.6287
+          },
+          "recall@3": {
+            "label": "Recall@3",
+            "config_value": 0.7612,
+            "ref_value": 0.7388,
+            "n": 67,
+            "mean_diff": 0.022388,
+            "ci95": [
+              -0.007463,
+              0.059701
+            ],
+            "p_value": 0.2505,
+            "prob_a_better": 0.8818
+          },
+          "recall@5": {
+            "label": "Recall@5",
+            "config_value": 0.8358,
+            "ref_value": 0.8284,
+            "n": 67,
+            "mean_diff": 0.007463,
+            "ci95": [
+              -0.014925,
+              0.037313
+            ],
+            "p_value": 0.7637,
+            "prob_a_better": 0.6135
+          },
+          "recall@10": {
+            "label": "Recall@10",
+            "config_value": 0.9627,
+            "ref_value": 0.9627,
+            "n": 67,
+            "mean_diff": 0.0,
+            "ci95": [
+              -0.022388,
+              0.022388
+            ],
+            "p_value": 1.0,
+            "prob_a_better": 0.3404
+          },
+          "score": {
+            "label": "Composite score",
+            "config_value": 0.7186567164179103,
+            "ref_value": 0.7134328358208955,
+            "n": 67,
+            "mean_diff": 0.005224,
+            "ci95": [
+              -0.00597,
+              0.017164
+            ],
+            "p_value": 0.4063,
+            "prob_a_better": 0.7901
+          }
+        },
+        "mcnemar": {
+          "recall@1": {
+            "b": 0,
+            "c": 0,
+            "n_discordant": 0,
+            "p_value": 1.0,
+            "net_questions": 0,
+            "config_wins": 0,
+            "ref_wins": 0
+          },
+          "recall@5": {
+            "b": 2,
+            "c": 1,
+            "n_discordant": 3,
+            "p_value": 1.0,
+            "net_questions": 1,
+            "config_wins": 2,
+            "ref_wins": 1
+          },
+          "recall@10": {
+            "b": 1,
+            "c": 1,
+            "n_discordant": 2,
+            "p_value": 1.0,
+            "net_questions": 0,
+            "config_wins": 1,
+            "ref_wins": 1
+          }
+        }
+      },
+      "Title identity only": {
+        "metrics": {
+          "recall@1": {
+            "label": "Recall@1",
+            "config_value": 0.4403,
+            "ref_value": 0.4403,
+            "n": 67,
+            "mean_diff": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "p_value": 1.0,
+            "prob_a_better": 0.0
+          },
+          "recall@3": {
+            "label": "Recall@3",
+            "config_value": 0.7388,
+            "ref_value": 0.7388,
+            "n": 67,
+            "mean_diff": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "p_value": 1.0,
+            "prob_a_better": 0.0
+          },
+          "recall@5": {
+            "label": "Recall@5",
+            "config_value": 0.8284,
+            "ref_value": 0.8284,
+            "n": 67,
+            "mean_diff": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "p_value": 1.0,
+            "prob_a_better": 0.0
+          },
+          "recall@10": {
+            "label": "Recall@10",
+            "config_value": 0.9627,
+            "ref_value": 0.9627,
+            "n": 67,
+            "mean_diff": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "p_value": 1.0,
+            "prob_a_better": 0.0
+          },
+          "score": {
+            "label": "Composite score",
+            "config_value": 0.7134328358208955,
+            "ref_value": 0.7134328358208955,
+            "n": 67,
+            "mean_diff": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "p_value": 1.0,
+            "prob_a_better": 0.0
+          }
+        },
+        "mcnemar": {
+          "recall@1": {
+            "b": 0,
+            "c": 0,
+            "n_discordant": 0,
+            "p_value": 1.0,
+            "net_questions": 0,
+            "config_wins": 0,
+            "ref_wins": 0
+          },
+          "recall@5": {
+            "b": 0,
+            "c": 0,
+            "n_discordant": 0,
+            "p_value": 1.0,
+            "net_questions": 0,
+            "config_wins": 0,
+            "ref_wins": 0
+          },
+          "recall@10": {
+            "b": 0,
+            "c": 0,
+            "n_discordant": 0,
+            "p_value": 1.0,
+            "net_questions": 0,
+            "config_wins": 0,
+            "ref_wins": 0
+          }
+        }
+      },
+      "All three (pos+cnt+assoc)": {
+        "metrics": {
+          "recall@1": {
+            "label": "Recall@1",
+            "config_value": 0.4179,
+            "ref_value": 0.4403,
+            "n": 67,
+            "mean_diff": -0.022388,
+            "ci95": [
+              -0.052239,
+              0.0
+            ],
+            "p_value": 0.1269,
+            "prob_a_better": 0.0
+          },
+          "recall@3": {
+            "label": "Recall@3",
+            "config_value": 0.7463,
+            "ref_value": 0.7388,
+            "n": 67,
+            "mean_diff": 0.007463,
+            "ci95": [
+              0.0,
+              0.022388
+            ],
+            "p_value": 0.6273,
+            "prob_a_better": 0.6373
+          },
+          "recall@5": {
+            "label": "Recall@5",
+            "config_value": 0.8284,
+            "ref_value": 0.8284,
+            "n": 67,
+            "mean_diff": 0.0,
+            "ci95": [
+              -0.029851,
+              0.029851
+            ],
+            "p_value": 1.0,
+            "prob_a_better": 0.4054
+          },
+          "recall@10": {
+            "label": "Recall@10",
+            "config_value": 0.9627,
+            "ref_value": 0.9627,
+            "n": 67,
+            "mean_diff": 0.0,
+            "ci95": [
+              -0.022388,
+              0.022388
+            ],
+            "p_value": 1.0,
+            "prob_a_better": 0.3404
+          },
+          "score": {
+            "label": "Composite score",
+            "config_value": 0.7044776119402985,
+            "ref_value": 0.7134328358208955,
+            "n": 67,
+            "mean_diff": -0.008955,
+            "ci95": [
+              -0.023881,
+              0.005224
+            ],
+            "p_value": 0.2356,
+            "prob_a_better": 0.1008
+          }
+        },
+        "mcnemar": {
+          "recall@1": {
+            "b": 0,
+            "c": 0,
+            "n_discordant": 0,
+            "p_value": 1.0,
+            "net_questions": 0,
+            "config_wins": 0,
+            "ref_wins": 0
+          },
+          "recall@5": {
+            "b": 2,
+            "c": 2,
+            "n_discordant": 4,
+            "p_value": 1.0,
+            "net_questions": 0,
+            "config_wins": 2,
+            "ref_wins": 2
+          },
+          "recall@10": {
+            "b": 1,
+            "c": 1,
+            "n_discordant": 2,
+            "p_value": 1.0,
+            "net_questions": 0,
+            "config_wins": 1,
+            "ref_wins": 1
+          }
+        }
+      }
+    }
+  },
+  "v1_reviewer_arithmetic": {
+    "net_questions": 2,
+    "n_questions": 50,
+    "min_attainable_p_value": 0.5,
+    "min_attainable_at": {
+      "b": 2,
+      "c": 0
+    },
+    "note": "A net gain of 2 questions with no discordant-pair compensation can never reach significance at the 5% level; the reviewer's 'at least 0.50' is exact."
+  },
+  "robustness_v1_vs_v4": {
+    "v1": {
+      "n_questions": 50,
+      "recall@1": {
+        "min": 0.22,
+        "max": 0.6,
+        "spread_pp": 38.0
+      },
+      "recall@10": {
+        "min": 0.86,
+        "max": 0.94,
+        "spread_pp": 8.0
+      }
+    },
+    "v4": {
+      "n_questions": 67,
+      "recall@1": {
+        "min": 0.403,
+        "max": 0.4403,
+        "spread_pp": 3.73
+      },
+      "recall@10": {
+        "min": 0.8134,
+        "max": 0.9627,
+        "spread_pp": 14.93
+      }
+    },
+    "recall@1_spread_reduction_factor": 10.2
+  },
+  "v1_bottomup": {
+    "n_questions": 50,
+    "without": {
+      "recall@5": 0.9,
+      "recall@10": 0.9,
+      "mean_rank": 3.02
+    },
+    "with": {
+      "recall@5": 0.9,
+      "recall@10": 0.94,
+      "mean_rank": 1.81
+    },
+    "net_questions": 2,
+    "note": "the 4.00 pp Recall@10 gain on a 50-question benchmark with 2 gold documents per question is a net gain of 2 questions"
+  }
+}

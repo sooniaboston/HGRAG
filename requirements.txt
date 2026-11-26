@@ -1,0 +1,14 @@
+# Core dependencies for the HGRAG reference implementation.
+#
+# The retrieval evaluation reported in the paper needs only these packages.
+# The embedding model (paraphrase-multilingual-MiniLM-L12-v2) and the
+# Elasticsearch 8.11.3 index are external services/artefacts; the sample in
+# sample/hgrag4_sample/ does not require Elasticsearch, because the released
+# result vectors allow every statistic to be recomputed offline.
+
+numpy>=1.24
+scipy>=1.10
+networkx>=3.0
+sentence-transformers>=2.2.0
+torch>=2.0
+requests>=2.31

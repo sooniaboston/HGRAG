@@ -1,0 +1,1662 @@
+{
+ "recall@1": 0.3209,
+ "recall@3": 0.6119,
+ "recall@5": 0.7463,
+ "recall@10": 0.8881,
+ "precision@1": 0.6418,
+ "precision@3": 0.408,
+ "precision@5": 0.2985,
+ "precision@10": 0.1776,
+ "mean_rank": 2.8939,
+ "mean_latency": 0.1755,
+ "median_latency": 0.1624,
+ "p95_latency": 0.2819,
+ "n_questions": 67,
+ "per_query": [
+  {
+   "id": "5a8b57f25542995d1e6f1371",
+   "question": "Were Scott Derrickson and Ed Wood of the same nationality?",
+   "gold": [
+    "Ed Wood",
+    "Scott Derrickson"
+   ],
+   "retrieved": [
+    "Woodson, Arkansas",
+    "Scott Derrickson",
+    "Ed Wood (film)",
+    "Ed Wood",
+    "Deliver Us from Evil (2014 film)",
+    "Tyler Bates",
+    "Doctor Strange (2016 film)",
+    "Adam Collis",
+    "Conrad Brooks",
+    "Sinister (film)"
+   ],
+   "t": 0.20158320013433695
+  },
+  {
+   "id": "5a8c7595554299585d9e36b6",
+   "question": "What government position was held by the woman who portrayed Corliss Archer in the film Kiss and Tell?",
+   "gold": [
+    "Kiss and Tell (1945 film)",
+    "Shirley Temple"
+   ],
+   "retrieved": [
+    "Kiss and Tell (1945 film)",
+    "A Kiss for Corliss",
+    "Janet Waldo",
+    "Shirley Temple",
+    "Ed Wood (film)",
+    "Ophur"
+   ],
+   "t": 0.15697030001319945
+  },
+  {
+   "id": "5a85ea095542994775f606a8",
+   "question": "What science fantasy young adult series, told in first person, has a set of companion books narrating the stories of enslaved worlds and alien species?",
+   "gold": [
+    "Animorphs",
+    "The Hork-Bajir Chronicles"
+   ],
+   "retrieved": [
+    "Science Fantasy (magazine)",
+    "Animorphs",
+    "The Divide trilogy",
+    "The Hork-Bajir Chronicles",
+    "Live in Japan (John Coltrane album)",
+    "Night School: the Web Series"
+   ],
+   "t": 0.13899179990403354
+  },
+  {
+   "id": "5adbf0a255429947ff17385a",
+   "question": "Are the Laleli Mosque and Esma Sultan Mansion located in the same neighborhood?",
+   "gold": [
+    "Esma Sultan Mansion",
+    "Laleli Mosque"
+   ],
+   "retrieved": [
+    "Laleli Mosque",
+    "Esma Sultan Mansion",
+    "Gevheri Kadın",
+    "Oldest synagogues in the United Kingdom",
+    "List of oldest synagogues",
+    "Esma Sultan (daughter of Abdul Hamid I)",
+    "Esma Sultan (daughter of Ahmed III)",
+    "Esma Sultan (daughter of Abdülaziz)",
+    "Küçük Hüseyin Pasha",
+    "Esma Sultan"
+   ],
+   "t": 0.17042639991268516
+  },
+  {
+   "id": "5a8e3ea95542995a26add48d",
+   "question": "The director of the romantic comedy \"Big Stone Gap\" is based in what New York city?",
+   "gold": [
+    "Adriana Trigiani",
+    "Big Stone Gap (film)"
+   ],
+   "retrieved": [
+    "Big Stone Gap (film)",
+    "Random House Tower",
+    "Kingston Morning",
+    "L'Oiseau Blanc",
+    "Grace Church School",
+    "Nelson Rockefeller",
+    "Great Eastern Conventions",
+    "Armand Castelmary",
+    "New York Society of Model Engineers",
+    "Pershing Square Capital Management"
+   ],
+   "t": 0.21766339987516403
+  },
+  {
+   "id": "5a85b2d95542997b5ce40028",
+   "question": "Who was known by his stage name Aladin and helped organizations improve their performance as a consultant?",
+   "gold": [
+    "Management consulting",
+    "Eenasul Fateh"
+   ],
+   "retrieved": [
+    "Eenasul Fateh",
+    "Diplomatic mission",
+    "Management consulting",
+    "Head of mission",
+    "Bordan Tkachuk",
+    "Diplomatic bag",
+    "State media"
+   ],
+   "t": 0.15298809995874763
+  },
+  {
+   "id": "5a87ab905542996e4f3088c1",
+   "question": "The arena where the Lewiston Maineiacs played their home games can seat how many people?",
+   "gold": [
+    "Lewiston Maineiacs",
+    "Androscoggin Bank Colisée"
+   ],
+   "retrieved": [
+    "2016–17 Vermont Catamounts men's basketball team",
+    "2006–07 QMJHL season",
+    "2007 Memorial Cup",
+    "Vermont Catamounts men's ice hockey",
+    "2011–12 QMJHL season",
+    "Lewiston Maineiacs",
+    "Dwyer Arena",
+    "2015–16 Vermont Catamounts men's basketball team",
+    "Androscoggin Bank Colisée",
+    "Billings Bulls"
+   ],
+   "t": 0.19506510021165013
+  },
+  {
+   "id": "5a7bbb64554299042af8f7cc",
+   "question": "Who is older, Annie Morton or Terry Richardson?",
+   "gold": [
+    "Annie Morton",
+    "Terry Richardson"
+   ],
+   "retrieved": [
+    "Annie Morton",
+    "Terry Richardson",
+    "Index Magazine",
+    "Snoecks",
+    "Piano Girl",
+    "Amanda Lepore",
+    "Lady Gaga x Terry Richardson",
+    "Gumbo (PJ Morton album)",
+    "Feel Good Inc.",
+    "Silene suksdorfii"
+   ],
+   "t": 0.16239270009100437
+  },
+  {
+   "id": "5a8db19d5542994ba4e3dd00",
+   "question": "Are Local H and For Against both from the United States?",
+   "gold": [
+    "For Against",
+    "Local H"
+   ],
+   "retrieved": [
+    "For Against",
+    "Silene suksdorfii",
+    "David Beckham Academy",
+    "State media",
+    "Mendocino County GMO Ban",
+    "David Waksberg",
+    "417th Flight Test Squadron",
+    "David Huntsinger",
+    "Eagle Mountain Railroad",
+    "Charles Craft"
+   ],
+   "t": 0.1372292002197355
+  },
+  {
+   "id": "5a877e5d5542993e715abf7d",
+   "question": "What screenwriter with credits for \"Evolution\" co-wrote a film starring Nicolas Cage and Téa Leoni?",
+   "gold": [
+    "The Family Man",
+    "David Weissman"
+   ],
+   "retrieved": [
+    "John Waters",
+    "The Family Man",
+    "Ungod",
+    "David Weissman",
+    "List of songs recorded by Ellie Goulding",
+    "Roald Dahl",
+    "Season of the Witch (2011 film)",
+    "Sela Ward",
+    "Gone in 60 Seconds (2000 film)",
+    "Deadfall (1993 film)"
+   ],
+   "t": 0.32945570000447333
+  },
+  {
+   "id": "5ab3b0bf5542992ade7c6e39",
+   "question": "What year did Guns N Roses perform a promo for a movie starring Arnold Schwarzenegger as a former New York Police detective?",
+   "gold": [
+    "End of Days (film)",
+    "Oh My God (Guns N' Roses song)"
+   ],
+   "retrieved": [
+    "End of Days (film)",
+    "Arnold Schwarzenegger filmography",
+    "Mihai Mălaimare Jr.",
+    "Guns N' Roses discography",
+    "Last Action Hero",
+    "True Lies",
+    "Oh My God (Guns N' Roses song)",
+    "Total Recall (1990 film)",
+    "Steven Adler",
+    "Hammerjack's"
+   ],
+   "t": 0.1528239999897778
+  },
+  {
+   "id": "5ae0d4c9554299603e418468",
+   "question": "Roger O. Egeberg was Assistant Secretary for Health and Scientific Affairs during the administration of a president that served during what years?",
+   "gold": [
+    "Roger O. Egeberg",
+    "Richard Nixon"
+   ],
+   "retrieved": [
+    "Roger O. Egeberg",
+    "Office of Population Affairs",
+    "Steven K. Galson",
+    "Robert Hormats",
+    "Asiatic-Pacific Theater",
+    "South West Pacific Area (command)",
+    "South West Pacific theatre of World War II",
+    "World War II casualties",
+    "Jeris White",
+    "No. 12 Squadron RAAF"
+   ],
+   "t": 0.2994295998942107
+  },
+  {
+   "id": "5a8133725542995ce29dcbdb",
+   "question": "Which writer was from England, Henry Roth or Robert Erskine Childers?",
+   "gold": [
+    "Henry Roth",
+    "Robert Erskine Childers"
+   ],
+   "retrieved": [
+    "Robert Barton",
+    "Henry Roth",
+    "Erskine Barton Childers",
+    "Robert Erskine Childers",
+    "Roald Dahl",
+    "Robert Caesar Childers",
+    "Gretchen Osgood Warren",
+    "Molly Childers",
+    "Irish Bulletin",
+    "John Waters"
+   ],
+   "t": 0.14074030006304383
+  },
+  {
+   "id": "5ae6050f55429929b0807a5e",
+   "question": "This singer of A Rather Blustery Day also voiced what hedgehog?",
+   "gold": [
+    "Jim Cummings",
+    "A Rather Blustery Day"
+   ],
+   "retrieved": [
+    "A Rather Blustery Day",
+    "Gary Lee Conner",
+    "Jim Cummings",
+    "Web Weirdos",
+    "Levolution (album)",
+    "The Wonderful Thing About Tiggers",
+    "Gösta Prüzelius",
+    "Winnie the Pooh and the Blustery Day"
+   ],
+   "t": 0.1570443999953568
+  },
+  {
+   "id": "5ae22b8d554299234fd0440f",
+   "question": "What was the father of Kasper Schmeichel voted to be by the IFFHS in 1992?",
+   "gold": [
+    "Kasper Schmeichel",
+    "Peter Schmeichel"
+   ],
+   "retrieved": [
+    "Kasper Schmeichel",
+    "Peter Schmeichel",
+    "David Waksberg",
+    "IFFHS World's Best Goalkeeper",
+    "IFFHS World's Best Club Coach",
+    "Nick Powell",
+    "Pelé",
+    "Boss Bailey",
+    "LaRon Landry",
+    "Champ Bailey"
+   ],
+   "t": 0.1790624000132084
+  },
+  {
+   "id": "5a722b8655429971e9dc9329",
+   "question": "Who was the writer of These Boots Are Made for Walkin' and who died in 2007?",
+   "gold": [
+    "Lee Hazlewood",
+    "These Boots Are Made for Walkin'"
+   ],
+   "retrieved": [
+    "Boots (album)",
+    "Boots (EP)",
+    "These Boots Are Made for Walkin'",
+    "The Twenty-fifth Anniversary Anthology",
+    "Puss N' Boots/These Boots Are Made for Walkin'",
+    "Thomas Gordon (writer)",
+    "Nancy Sinatra",
+    "List of songs recorded by Ellie Goulding",
+    "John Waters",
+    "Sela Ward"
+   ],
+   "t": 0.1836290000937879
+  },
+  {
+   "id": "5adf37a95542995ec70e8f97",
+   "question": "The 2011–12 VCU Rams men's basketball team, led by third year head coach Shaka Smart, represented Virginia Commonwealth University which was founded in what year?",
+   "gold": [
+    "Virginia Commonwealth University",
+    "2011–12 VCU Rams men's basketball team"
+   ],
+   "retrieved": [
+    "2011–12 VCU Rams men's basketball team",
+    "2015–16 VCU Rams men's basketball team",
+    "2009–10 VCU Rams men's basketball team",
+    "2014–15 VCU Rams men's basketball team",
+    "2013–14 VCU Rams men's basketball team",
+    "2010–11 VCU Rams men's basketball team",
+    "2012–13 VCU Rams men's basketball team",
+    "Virginia Commonwealth University",
+    "2004–05 VCU Rams men's basketball team",
+    "1995–96 VCU Rams men's basketball team"
+   ],
+   "t": 0.20890609989874065
+  },
+  {
+   "id": "5abd259d55429924427fcf1a",
+   "question": "Are both Dictyosperma, and Huernia described as a genus?",
+   "gold": [
+    "Dictyosperma",
+    "Huernia"
+   ],
+   "retrieved": [
+    "Huernia",
+    "Dictyosperma",
+    "Charles Charamba"
+   ],
+   "t": 0.1650300999172032
+  },
+  {
+   "id": "5a828c8355429966c78a6a50",
+   "question": "Kaiser Ventures corporation was founded by an American industrialist who became known as the father of modern American shipbuilding?",
+   "gold": [
+    "Kaiser Ventures",
+    "Henry J. Kaiser"
+   ],
+   "retrieved": [
+    "Kaiser Shipyards",
+    "Henry J. Kaiser",
+    "Kaiser Ventures",
+    "Edgar Kaiser Jr.",
+    "Edgar Kaiser Sr.",
+    "Battle of Romanovka",
+    "Asiatic-Pacific Theater",
+    "History of the Kansas City metropolitan area",
+    "United States Mission to the European Union",
+    "Silene suksdorfii"
+   ],
+   "t": 0.18594420002773404
+  },
+  {
+   "id": "5ae0361155429925eb1afc2c",
+   "question": "Which  French ace pilot and adventurer fly L'Oiseau Blanc",
+   "gold": [
+    "L'Oiseau Blanc",
+    "Charles Nungesser"
+   ],
+   "retrieved": [
+    "L'Oiseau Blanc",
+    "Levasseur PL.8",
+    "François Coli",
+    "Wooster and Davis",
+    "Paul Sauvage (aviator)",
+    "Charles Nungesser",
+    "Georges Madon",
+    "Alexander Kerensky",
+    "Carrefour",
+    "Jonathan Michael Ansell"
+   ],
+   "t": 0.18185260007157922
+  },
+  {
+   "id": "5abc0a5d5542993f40c73c64",
+   "question": "Are Freakonomics and In the Realm of the Hackers both American documentaries?",
+   "gold": [
+    "Freakonomics (film)",
+    "In the Realm of the Hackers"
+   ],
+   "retrieved": [
+    "In the Realm of the Hackers",
+    "Hackers (film)",
+    "Robin Goldstein",
+    "Freakonomics (film)",
+    "Freakonomics Radio",
+    "Heidi Ewing",
+    "Alpine National Park",
+    "2014 Birthday Honours",
+    "South West Pacific Area (command)",
+    "2017 Birthday Honours"
+   ],
+   "t": 0.22739950008690357
+  },
+  {
+   "id": "5a7cc50e554299452d57ba3e",
+   "question": "Which band, Letters to Cleo or Screaming Trees, had more members?",
+   "gold": [
+    "Letters to Cleo",
+    "Screaming Trees"
+   ],
+   "retrieved": [
+    "Letters to Cleo",
+    "Screaming Trees discography",
+    "Change Has Come",
+    "Screaming Trees",
+    "Van Conner",
+    "Beat Happening/Screaming Trees",
+    "Gary Lee Conner",
+    "Jamboree (Beat Happening album)",
+    "Mad Season (band)",
+    "Skin Yard"
+   ],
+   "t": 0.16537820012308657
+  },
+  {
+   "id": "5abf63f15542997ec76fd3ea",
+   "question": "Alexander Kerensky was defeated and destroyed by the Bolsheviks in the course of a civil war that ended when ?",
+   "gold": [
+    "Russian Civil War",
+    "Socialist Revolutionary Party"
+   ],
+   "retrieved": [
+    "Socialist Revolutionary Party",
+    "Lavr Kornilov",
+    "Kerensky–Krasnov uprising",
+    "Alexander Kerensky",
+    "Louise Bryant",
+    "Russian Civil War",
+    "Communism in Russia",
+    "Left-wing uprisings against the Bolsheviks",
+    "Battle of Romanovka",
+    "Ephraim Sklyansky"
+   ],
+   "t": 0.12319429987110198
+  },
+  {
+   "id": "5a8ef2a75542995a26add583",
+   "question": "Seven Brief Lessons on Physics was written by an Italian physicist that has worked in France since what year?",
+   "gold": [
+    "Seven Brief Lessons on Physics",
+    "Carlo Rovelli"
+   ],
+   "retrieved": [
+    "Seven Brief Lessons on Physics",
+    "Guido Caldarelli",
+    "Chiara Nappi",
+    "Jacopo Puccini",
+    "First Italo-Ethiopian War",
+    "Treaty of Addis Ababa",
+    "Parma Airport",
+    "Ferdinando Provesi",
+    "Katri, Girl of the Meadows",
+    "Second Battle of Agordat"
+   ],
+   "t": 0.10613889992237091
+  },
+  {
+   "id": "5a80721b554299485f5985ef",
+   "question": "The Livesey Hal War Memorial commemorates the fallen of which war, that had over 60 million casualties?",
+   "gold": [
+    "World War II casualties",
+    "Livesey Hall War Memorial"
+   ],
+   "retrieved": [
+    "Rainham War Memorial",
+    "Vietnam War Memorial, Hanoi",
+    "Livesey Hall War Memorial",
+    "Tower Hill Memorial",
+    "World War II casualties",
+    "Arras Flying Services Memorial",
+    "No. 2 Squadron RAAF",
+    "English Electric Canberra",
+    "No. 12 Squadron RAAF",
+    "Keith Bostic (American football)"
+   ],
+   "t": 0.4934413000009954
+  },
+  {
+   "id": "5ab51dae5542991779162d82",
+   "question": "Are both Elko Regional Airport and Gerald R. Ford International Airport located in Michigan?",
+   "gold": [
+    "Elko Regional Airport",
+    "Gerald R. Ford International Airport"
+   ],
+   "retrieved": [
+    "Elko Regional Airport",
+    "Bishop International Airport",
+    "Gerald R. Ford International Airport",
+    "Raleigh Executive Jetport"
+   ],
+   "t": 0.3459147000685334
+  },
+  {
+   "id": "5a7571135542992d0ec05f98",
+   "question": "Ralph Hefferline was a psychology professor at a university that is located in what city?",
+   "gold": [
+    "Ralph Hefferline",
+    "Columbia University"
+   ],
+   "retrieved": [
+    "Ralph Hefferline",
+    "Abraham Maslow",
+    "E. Mavis Hetherington",
+    "Princeton Neuroscience Institute"
+   ],
+   "t": 0.22360080014914274
+  },
+  {
+   "id": "5a79311755429970f5fffe67",
+   "question": "A Japanese manga series based on a 16 year old high school student Ichitaka Seto, is written and illustrated by someone born in what year?",
+   "gold": [
+    "Masakazu Katsura",
+    "I&quot;s"
+   ],
+   "retrieved": [
+    "I&quot;s",
+    "Clear Skies!",
+    "The Kindaichi Case Files",
+    "Haven't You Heard? I'm Sakamoto",
+    "Masakazu Katsura"
+   ],
+   "t": 0.19869890017434955
+  },
+  {
+   "id": "5a8e068b5542995085b37384",
+   "question": "Are Ferocactus and Silene both types of plant?",
+   "gold": [
+    "Silene",
+    "Ferocactus"
+   ],
+   "retrieved": [
+    "Silene",
+    "Ferocactus",
+    "Fokienia",
+    "Sex determination in Silene",
+    "Silene stenophylla",
+    "Silene tomentosa",
+    "Huernia",
+    "Montezuma Castle National Monument",
+    "Libocedrus",
+    "Silene menziesii"
+   ],
+   "t": 0.18814089987426996
+  },
+  {
+   "id": "5abbf698554299114383a0b5",
+   "question": "Which British first-generation jet-powered medium bomber was used in the South West Pacific theatre of World War II?",
+   "gold": [
+    "English Electric Canberra",
+    "No. 2 Squadron RAAF"
+   ],
+   "retrieved": [
+    "No. 2 Squadron RAAF",
+    "Coastwatchers",
+    "South West Pacific Area (command)",
+    "South West Pacific theatre of World War II",
+    "English Electric Canberra",
+    "No. 12 Squadron RAAF",
+    "Edwin A. Doss",
+    "Hill Air Force Base",
+    "Savoia-Marchetti SM.79",
+    "Asiatic-Pacific Theater"
+   ],
+   "t": 0.14992860006168485
+  },
+  {
+   "id": "5ab84bf555429916710eb01f",
+   "question": "In 1991 Euromarché was bought by a chain that operated how any hypermarkets at the end of 2016?",
+   "gold": [
+    "Carrefour",
+    "Euromarché"
+   ],
+   "retrieved": [
+    "Euromarché",
+    "John A. Brown (department store)",
+    "Carrefour",
+    "SavaCentre"
+   ],
+   "t": 0.16834650002419949
+  },
+  {
+   "id": "5a77724455429972597f153e",
+   "question": "What race track in the midwest hosts a 500 mile race eavery May?",
+   "gold": [
+    "1957 Indianapolis 500",
+    "Indianapolis Motor Speedway"
+   ],
+   "retrieved": [
+    "Subway 400",
+    "Johnny Rutherford",
+    "Indianapolis Motor Speedway",
+    "Carolina Dodge Dealers 400",
+    "Allison Transmission",
+    "2000 PGA Championship",
+    "Tony Ave",
+    "Louis Schwitzer Award",
+    "1957 Indianapolis 500",
+    "William D. Russell (director)"
+   ],
+   "t": 0.18444380001164973
+  },
+  {
+   "id": "5a87c13f5542996e4f30890c",
+   "question": "In what city did the \"Prince of tenors\" star in a film based on an opera by Giacomo Puccini?",
+   "gold": [
+    "Franco Corelli",
+    "Tosca (1956 film)"
+   ],
+   "retrieved": [
+    "La fanciulla del West",
+    "O mio babbino caro",
+    "List of major opera composers",
+    "Ron Bottcher",
+    "Tosca (1956 film)",
+    "Gianni Schicchi",
+    "Festival Puccini",
+    "Cesira Ferrani",
+    "Jacopo Puccini",
+    "La Bohème (1988 film)"
+   ],
+   "t": 0.16578300017863512
+  },
+  {
+   "id": "5ab96ab755429970cfb8eacd",
+   "question": "Ellie Goulding worked with what other writers on her third studio album, Delirium?",
+   "gold": [
+    "On My Mind (Ellie Goulding song)",
+    "Delirium (Ellie Goulding album)"
+   ],
+   "retrieved": [
+    "Something in the Way You Move",
+    "Delirium (Ellie Goulding album)",
+    "List of songs recorded by Ellie Goulding",
+    "On My Mind (Ellie Goulding song)",
+    "Delirium World Tour",
+    "Outside (Calvin Harris song)",
+    "Love Me like You Do",
+    "Army (Ellie Goulding song)",
+    "John Waters",
+    "Sela Ward"
+   ],
+   "t": 0.14963979995809495
+  },
+  {
+   "id": "5a8a43eb5542996c9b8d5e82",
+   "question": "Which Australian city founded in 1838 contains a boarding school opened by a Prime Minister of Australia and named after a school in London of the same name.",
+   "gold": [
+    "Westminster School, Adelaide",
+    "Marion, South Australia"
+   ],
+   "retrieved": [
+    "Westminster School, Adelaide",
+    "Michael Wynne (playwright)",
+    "DeObia Oparei",
+    "James Roland MacLaren",
+    "Tower Hill Memorial",
+    "Livesey Hall War Memorial",
+    "Moments of Being",
+    "Virginia Woolf",
+    "David Beckham Academy",
+    "2014 Birthday Honours"
+   ],
+   "t": 0.1479756000917405
+  },
+  {
+   "id": "5ae73acb5542991e8301cc07",
+   "question": "D1NZ is a series based on what oversteering technique?",
+   "gold": [
+    "Drifting (motorsport)",
+    "D1NZ"
+   ],
+   "retrieved": [
+    "D1NZ",
+    "Drifting (motorsport)",
+    "William Connolley"
+   ],
+   "t": 0.09688359987922013
+  },
+  {
+   "id": "5a7320565542991f9a20c61d",
+   "question": "who is younger Keith Bostic or Jerry Glanville ?",
+   "gold": [
+    "Jerry Glanville",
+    "Keith Bostic (American football)"
+   ],
+   "retrieved": [
+    "Keith Bostic (American football)",
+    "Jerry Glanville",
+    "Mouse Davis",
+    "1989 Houston Oilers season",
+    "Ken Herock",
+    "1987 Pittsburgh Steelers season",
+    "Portland State Vikings football under Jerry Glanville",
+    "Lucky to Be Alive (Confederate Railroad album)",
+    "1990 Atlanta Falcons season",
+    "Keith Bostic"
+   ],
+   "t": 0.11700770002789795
+  },
+  {
+   "id": "5aba7cfe554299232ef4a2fd",
+   "question": "The 2017–18 Wigan Athletic F.C. season will be a year in which the team competes in the league cup known as what for sponsorship reasons?",
+   "gold": [
+    "EFL Cup",
+    "2017–18 Wigan Athletic F.C. season"
+   ],
+   "retrieved": [
+    "2006–07 Wigan Athletic F.C. season",
+    "2007–08 Wigan Athletic F.C. season",
+    "List of Wigan Borough F.C. players",
+    "Springfield Park (Wigan)",
+    "1978–79 Wigan Athletic F.C. season",
+    "1979–80 Wigan Athletic F.C. season",
+    "2017–18 Wigan Athletic F.C. season",
+    "Nick Powell",
+    "EFL Cup"
+   ],
+   "t": 0.18918849993497133
+  },
+  {
+   "id": "5ae7e1fc55429952e35ea9cc",
+   "question": "What color clothing do people of the Netherlands wear during Oranjegekte or to celebrate the national holiday Koningsdag? ",
+   "gold": [
+    "Koningsdag",
+    "Oranjegekte"
+   ],
+   "retrieved": [
+    "Oranjegekte",
+    "Queen's Day (disambiguation)",
+    "Koningsdag",
+    "Jounen Kwéyòl"
+   ],
+   "t": 0.15068279998376966
+  },
+  {
+   "id": "5ae33c4d5542992f92d82262",
+   "question": "Robert Suettinger was the national intelligence officer under which former Governor of Arkansas?",
+   "gold": [
+    "Bill Clinton",
+    "Robert Suettinger"
+   ],
+   "retrieved": [
+    "Robert Suettinger",
+    "Bill Clinton",
+    "National Intelligence Estimate",
+    "Ground Intelligence Officer",
+    "Hunter Davies"
+   ],
+   "t": 0.14037830010056496
+  },
+  {
+   "id": "5a77cb335542997042120b3a",
+   "question": "What American professional Hawaiian surfer born 18 October 1992 won the Rip Curl Pro Portugal?",
+   "gold": [
+    "John John Florence",
+    "MEO Rip Curl Pro Portugal"
+   ],
+   "retrieved": [
+    "John John Florence",
+    "Coco Ho",
+    "MEO Rip Curl Pro Portugal",
+    "Supertubos",
+    "Moche Rip Curl Pro Portugal 2014",
+    "Moche Rip Curl Pro Portugal 2015",
+    "MEO Rip Curl Pro Portugal 2016",
+    "MEO Rip Curl Pro Portugal 2017",
+    "Barton Lynch",
+    "Jeris White"
+   ],
+   "t": 0.15536889992654324
+  },
+  {
+   "id": "5a8979f4554299669944a52e",
+   "question": "What is the middle name of the actress who plays Bobbi Bacha in Suburban Madness?",
+   "gold": [
+    "Sela Ward",
+    "Bobbi Bacha"
+   ],
+   "retrieved": [
+    "Bobbi Bacha",
+    "Suburban Madness",
+    "Brother from Another Series",
+    "Sela Ward",
+    "About a Boy (film)"
+   ],
+   "t": 0.16827469994314015
+  },
+  {
+   "id": "5a713ea95542994082a3e6e4",
+   "question": "Alvaro Mexia had a diplomatic mission with which tribe of indigenous people?",
+   "gold": [
+    "Alvaro Mexia",
+    "Indigenous peoples of Florida"
+   ],
+   "retrieved": [
+    "Alvaro Mexia",
+    "Spirit of the Border",
+    "Diplomatic mission",
+    "Diplomatic bag",
+    "Head of mission",
+    "Amaruk Kayshapanta",
+    "State media"
+   ],
+   "t": 0.11636610003188252
+  },
+  {
+   "id": "5a78bd9b554299078472774a",
+   "question": "What nationality were social anthropologists Alfred Gell and Edmund Leach?",
+   "gold": [
+    "Edmund Leach",
+    "Alfred Gell"
+   ],
+   "retrieved": [
+    "Alfred Gell",
+    "Edmund Leach",
+    "Coral Gardens and Their Magic",
+    "Participant observation"
+   ],
+   "t": 0.10403560008853674
+  },
+  {
+   "id": "5a7625e8554299109176e66a",
+   "question": "In which year was the King who made the 1925 Birthday Honours born?",
+   "gold": [
+    "1925 Birthday Honours",
+    "George V"
+   ],
+   "retrieved": [
+    "1925 Birthday Honours",
+    "1951 Birthday Honours",
+    "2014 Birthday Honours",
+    "George V",
+    "Birthday Honours",
+    "2013 Birthday Honours",
+    "1965 Birthday Honours",
+    "2016 Birthday Honours",
+    "2017 Birthday Honours",
+    "2015 Birthday Honours"
+   ],
+   "t": 0.17168529983609915
+  },
+  {
+   "id": "5abdf12255429976d4830a2f",
+   "question": "The Album Against the Wind was the 11th Album of a Rock singer Robert C Seger born may 6 1945. What was the Rock singers stage name ?",
+   "gold": [
+    "Against the Wind (album)",
+    "Bob Seger"
+   ],
+   "retrieved": [
+    "Against the Wind (album)",
+    "Bob Seger",
+    "Stranger in Town (album)",
+    "Ride Out (album)",
+    "A Rather Blustery Day",
+    "Billy Ray Cyrus discography",
+    "Kierra Sheard",
+    "1953 Georgia Tech Yellow Jackets football team",
+    "Karen Clark Sheard",
+    "Seminole"
+   ],
+   "t": 0.12471309979446232
+  },
+  {
+   "id": "5a88658955429938390d3f47",
+   "question": "Rostker v. Goldberg held that the practice of what way of filling armed forces vacancies was consitutional?",
+   "gold": [
+    "Conscription in the United States",
+    "Rostker v. Goldberg"
+   ],
+   "retrieved": [
+    "Rostker v. Goldberg",
+    "September 16 military parade",
+    "One Rank, One Pension",
+    "Conscription in the United States",
+    "Armed Forces Covenant",
+    "Chief of the Defence Staff (Canada)",
+    "Executive Order 10925",
+    "Sainik School Balachadi, Jamnagar",
+    "Ground Intelligence Officer",
+    "Campaign finance reform in the United States"
+   ],
+   "t": 0.15970450011081994
+  },
+  {
+   "id": "5a86ebac55429960ec39b6d6",
+   "question": "Handi-Snacks are a snack food product line sold by what American multinational confectionery, food, and beverage company that is based in Illinois?",
+   "gold": [
+    "Handi-Snacks",
+    "Mondelez International"
+   ],
+   "retrieved": [
+    "Twisties",
+    "Handi-Snacks",
+    "Mondelez International",
+    "Robert's American Gourmet Food",
+    "Snack Foods Limited",
+    "FreedomFilmFest"
+   ],
+   "t": 0.15050099999643862
+  },
+  {
+   "id": "5ae5736e5542990ba0bbb2b3",
+   "question": "When was the American lawyer, lobbyist and political consultant who was a senior member of the presidential campaign of Donald Trump born?",
+   "gold": [
+    "Trump campaign–Russian meeting",
+    "Paul Manafort"
+   ],
+   "retrieved": [
+    "Trump campaign–Russian meeting",
+    "David Urban",
+    "Protests against Donald Trump",
+    "Brad Parscale",
+    "Paul Manafort",
+    "Donald Trump in music",
+    "Tony Fabrizio",
+    "Donald Trump presidential campaign, 2000",
+    "Immigration policy of Donald Trump",
+    "Donald Trump (Last Week Tonight)"
+   ],
+   "t": 0.15614560013636947
+  },
+  {
+   "id": "5a7759fc5542993569682d60",
+   "question": "Where are Teide National Park and Garajonay National Park located?",
+   "gold": [
+    "Garajonay National Park",
+    "Teide National Park"
+   ],
+   "retrieved": [
+    "Roque Cinchado",
+    "Garajonay National Park",
+    "Adenocarpus viscosus",
+    "Training centre for release of the Atma-energy",
+    "Hermigua",
+    "Crater Lake National Park",
+    "Glacier National Park Fund",
+    "Teide National Park",
+    "North Cascades National Park"
+   ],
+   "t": 0.20405499986372888
+  },
+  {
+   "id": "5aba749055429901930fa7d8",
+   "question": "What occupation do Chris Menges and Aram Avakian share?",
+   "gold": [
+    "Aram Avakian",
+    "Chris Menges"
+   ],
+   "retrieved": [
+    "Cops and Robbers (1973 film)",
+    "11 Harrowhouse",
+    "Aram Avakian",
+    "Eenasul Fateh",
+    "Made in Britain",
+    "End of the Road (1970 film)",
+    "Chris Menges",
+    "A World Apart (film)",
+    "CrissCross",
+    "Linda Mvusi"
+   ],
+   "t": 0.24115669983439147
+  },
+  {
+   "id": "5abfb3425542990832d3a1c0",
+   "question": "Andrew Jaspan was the co-founder of what not-for-profit media outlet?",
+   "gold": [
+    "Andrew Jaspan",
+    "The Conversation (website)"
+   ],
+   "retrieved": [
+    "Andrew Jaspan",
+    "State media",
+    "Advice column",
+    "Chicago Public Media",
+    "Alfred Balk",
+    "Big Stone Gap (film)",
+    "The Conversation (website)",
+    "EvidenceNetwork.ca"
+   ],
+   "t": 0.11470490018837154
+  },
+  {
+   "id": "5ae53b545542990ba0bbb23c",
+   "question": "Where does the hotel and casino located in which Bill Cosby's third album was recorded?",
+   "gold": [
+    "Why Is There Air?",
+    "Flamingo Las Vegas"
+   ],
+   "retrieved": [
+    "At Last Bill Cosby Really Sings",
+    "Inside the Mind of Bill Cosby",
+    "Bill's Best Friend",
+    "Yes, Yes, Yes",
+    "Bob Seger",
+    "Disco Bill",
+    "Why Is There Air?",
+    "Bill Cosby Is a Very Funny Fellow...Right!",
+    "Hikky Burr",
+    "The Original Jam Sessions 1969"
+   ],
+   "t": 0.20633269986137748
+  },
+  {
+   "id": "5ae2b770554299495565db0f",
+   "question": "In what month is the annual documentary film festival, that is presented by the fortnightly published British journal of literary essays, held? ",
+   "gold": [
+    "London Review of Books",
+    "London International Documentary Festival"
+   ],
+   "retrieved": [
+    "London International Documentary Festival",
+    "Doc NYC",
+    "London Review of Books",
+    "New Haven Documentary Film Festival",
+    "Docville"
+   ],
+   "t": 0.2249643001705408
+  },
+  {
+   "id": "5a80b3a9554299485f5986cc",
+   "question": "Tysons Galleria is located in what county?",
+   "gold": [
+    "Tysons Galleria",
+    "McLean, Virginia"
+   ],
+   "retrieved": [
+    "Tysons, Virginia",
+    "Tysons Galleria",
+    "Tysons Corner Center",
+    "McLean, Virginia",
+    "Scott's Run Nature Preserve",
+    "Poughkeepsie Galleria",
+    "West McLean, Virginia",
+    "McLean station",
+    "Spring Hill station",
+    "John A. Brown (department store)"
+   ],
+   "t": 0.15607969998382032
+  },
+  {
+   "id": "5a8e0a005542995085b373a1",
+   "question": "Bordan Tkachuk was the CEO of a company that provides what sort of products?",
+   "gold": [
+    "Viglen",
+    "Bordan Tkachuk"
+   ],
+   "retrieved": [
+    "Bordan Tkachuk",
+    "Three Comrades (novel)",
+    "Robert's American Gourmet Food",
+    "George D. Buffett"
+   ],
+   "t": 0.14565590000711381
+  },
+  {
+   "id": "5a84c4135542994c784dda31",
+   "question": "Are Yingkou and Fuding the same level of city?",
+   "gold": [
+    "Yingkou",
+    "Fuding"
+   ],
+   "retrieved": [
+    "Xiapu County",
+    "Taimushan Railway Station",
+    "Fuding",
+    "Fuding Railway Station",
+    "Tongcheng Subdistrict, Fuding",
+    "Yingkou Lanqi Airport",
+    "Yingkou",
+    "Yingkou East Railway Station",
+    "Bayuquan Railway Station",
+    "Roman Catholic Diocese of Yingkou"
+   ],
+   "t": 0.15938479988835752
+  },
+  {
+   "id": "5a85eed75542996432c5713b",
+   "question": "Where did the descendants of the group of black Indians associated with the Seminole people settle?",
+   "gold": [
+    "Mascogos",
+    "Black Seminoles"
+   ],
+   "retrieved": [
+    "Black Seminoles",
+    "Battle of Jupiter Inlet",
+    "Seminole Nation of Oklahoma",
+    "Seminole",
+    "Seminole music",
+    "Spirit of the Border",
+    "Muscogee language",
+    "Indigenous peoples of Florida",
+    "Seminole County, Oklahoma",
+    "Draining and development of the Everglades"
+   ],
+   "t": 0.12993390019983053
+  },
+  {
+   "id": "5a774e9c55429972597f14f3",
+   "question": "David Huntsinger has worked with this gospel singer born in the month of July?",
+   "gold": [
+    "Larnelle Harris",
+    "David Huntsinger"
+   ],
+   "retrieved": [
+    "Larnelle Harris",
+    "David Huntsinger",
+    "Latice Crawford",
+    "Halcyon (album)",
+    "Outside (Calvin Harris song)",
+    "Madtown",
+    "Gruhn Guitars",
+    "Muyiwa Olarewaju",
+    "Flashlight (DJ Fresh song)",
+    "List of songs recorded by Ellie Goulding"
+   ],
+   "t": 0.12588110007345676
+  },
+  {
+   "id": "5ae738f75542991bbc9761c4",
+   "question": "What year was the brother of this first round draft pick by the Washington Redskins drafted?",
+   "gold": [
+    "Champ Bailey",
+    "Boss Bailey"
+   ],
+   "retrieved": [
+    "Jeris White",
+    "Champ Bailey",
+    "Ron Snidow",
+    "Boss Bailey"
+   ],
+   "t": 0.22881469991989434
+  },
+  {
+   "id": "5abc8d75554299700f9d7900",
+   "question": "Since 2 June 2017, The Leader of Fine Gael had been held by which Irish Fine Gael politician who has served as Taoiseach and Minister for Defence?",
+   "gold": [
+    "Leader of Fine Gael",
+    "Leo Varadkar"
+   ],
+   "retrieved": [
+    "Enda Kenny",
+    "Leo Varadkar",
+    "John Bruton",
+    "Fine Gael leadership election, 2017",
+    "Simon Coveney",
+    "Leader of Fine Gael",
+    "Liam Cosgrave",
+    "Paddy O'Toole",
+    "Frances Fitzgerald (politician)",
+    "James Reilly (Irish politician)"
+   ],
+   "t": 0.19384539988823235
+  },
+  {
+   "id": "5a8bb29b554299240d9c2089",
+   "question": "Which American film actor and dancer starred in the 1945 film Johnny Angel?",
+   "gold": [
+    "George Raft",
+    "Johnny Angel"
+   ],
+   "retrieved": [
+    "Johnny Angel",
+    "John Waters",
+    "Ed Wood",
+    "18th Independent Spirit Awards"
+   ],
+   "t": 0.191991199972108
+  },
+  {
+   "id": "5a8b8b3155429949d91db5d7",
+   "question": "What type of activity does Owner earnings and Warren Buffett have in common?",
+   "gold": [
+    "Owner earnings",
+    "Warren Buffett"
+   ],
+   "retrieved": [
+    "The Warren Buffett Way",
+    "Owner earnings",
+    "George D. Buffett",
+    "TaeguTec",
+    "Buffett Foundation",
+    "Susan Buffett",
+    "Susan Alice Buffett",
+    "Howard Graham Buffett",
+    "Warren Buffett"
+   ],
+   "t": 0.13335450016893446
+  },
+  {
+   "id": "5a8c4c625542995e66a475a1",
+   "question": "Which airplane was this Major test-flying after whom the base, that 514th Flight Test Squadron is stated at, is named?",
+   "gold": [
+    "514th Flight Test Squadron",
+    "Hill Air Force Base"
+   ],
+   "retrieved": [
+    "415th Flight Test Flight",
+    "514th Flight Test Squadron",
+    "10th Flight Test Squadron",
+    "339th Flight Test Squadron",
+    "413th Flight Test Squadron",
+    "370th Flight Test Squadron",
+    "419th Flight Test Squadron",
+    "Hill Air Force Base",
+    "417th Flight Test Squadron",
+    "486th Flight Test Squadron"
+   ],
+   "t": 0.12907659984193742
+  },
+  {
+   "id": "5ae63dad55429929b0807afe",
+   "question": "When was the British author who wrote the novel on which \"Here We Go Round the Mulberry Bush\" was based born? ",
+   "gold": [
+    "Here We Go Round the Mulberry Bush (film)",
+    "Hunter Davies"
+   ],
+   "retrieved": [
+    "The Birds on the Trees",
+    "List of songs recorded by Ellie Goulding",
+    "John Waters",
+    "Sela Ward",
+    "Ed Wood",
+    "Here We Go Round the Mulberry Bush",
+    "Here We Go Round the Mulberry Bush (Traffic song)",
+    "Michael Finnegan (song)",
+    "Christopher Mitchell (actor)",
+    "The Wheels on the Bus"
+   ],
+   "t": 0.13633190002292395
+  },
+  {
+   "id": "5a7dcc775542990b8f503ab5",
+   "question": "Which component of shellite has the formula (ON)CHOH?",
+   "gold": [
+    "Picric acid",
+    "Shellite (explosive)"
+   ],
+   "retrieved": [
+    "Index of alcohol-related articles",
+    "Shellite (explosive)",
+    "1-Pentanol",
+    "Deep-fried peanuts",
+    "Isopropyl alcohol",
+    "Aldonic acid",
+    "1-Hexanol",
+    "Mobil Producing Nigeria",
+    "Picric acid"
+   ],
+   "t": 0.11005300004035234
+  },
+  {
+   "id": "5a887bc0554299206df2b2b6",
+   "question": "The Argentine PGA Championship record holder has won how many tournaments worldwide?",
+   "gold": [
+    "Roberto De Vicenzo",
+    "Argentine PGA Championship"
+   ],
+   "retrieved": [
+    "Argentine PGA Championship",
+    "2018 PGA Championship",
+    "Northern California PGA Championship",
+    "2006 PGA Championship",
+    "1939 PGA Championship",
+    "2000 PGA Championship",
+    "Middle Atlantic PGA Championship",
+    "1940 PGA Championship",
+    "1977 PGA Championship",
+    "Roberto De Vicenzo"
+   ],
+   "t": 0.16916320007294416
+  }
+ ],
+ "per_question_recall@1": [
+  0.0,
+  0.5,
+  0.0,
+  0.5,
+  0.5,
+  0.5,
+  0.0,
+  0.5,
+  0.5,
+  0.0,
+  0.5,
+  0.5,
+  0.0,
+  0.5,
+  0.5,
+  0.0,
+  0.5,
+  0.5,
+  0.0,
+  0.5,
+  0.5,
+  0.5,
+  0.5,
+  0.5,
+  0.0,
+  0.5,
+  0.5,
+  0.5,
+  0.5,
+  0.5,
+  0.5,
+  0.0,
+  0.0,
+  0.0,
+  0.5,
+  0.5,
+  0.5,
+  0.0,
+  0.5,
+  0.5,
+  0.5,
+  0.5,
+  0.5,
+  0.5,
+  0.5,
+  0.5,
+  0.5,
+  0.0,
+  0.5,
+  0.0,
+  0.0,
+  0.5,
+  0.0,
+  0.5,
+  0.0,
+  0.5,
+  0.0,
+  0.5,
+  0.5,
+  0.0,
+  0.0,
+  0.5,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.5
+ ],
+ "per_question_recall@3": [
+  0.5,
+  0.5,
+  0.5,
+  1.0,
+  0.5,
+  1.0,
+  0.0,
+  1.0,
+  0.5,
+  0.5,
+  0.5,
+  0.5,
+  0.5,
+  1.0,
+  1.0,
+  0.5,
+  0.5,
+  1.0,
+  1.0,
+  0.5,
+  0.5,
+  0.5,
+  0.5,
+  0.5,
+  0.5,
+  1.0,
+  0.5,
+  0.5,
+  1.0,
+  0.5,
+  1.0,
+  0.5,
+  0.0,
+  0.5,
+  0.5,
+  1.0,
+  1.0,
+  0.0,
+  1.0,
+  1.0,
+  1.0,
+  0.5,
+  0.5,
+  1.0,
+  0.5,
+  1.0,
+  0.5,
+  1.0,
+  0.5,
+  0.5,
+  0.5,
+  0.5,
+  0.0,
+  1.0,
+  0.5,
+  0.5,
+  0.5,
+  0.5,
+  1.0,
+  0.5,
+  0.5,
+  0.5,
+  0.5,
+  0.5,
+  0.0,
+  0.5,
+  0.5
+ ],
+ "per_question_recall@5": [
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  0.5,
+  1.0,
+  0.0,
+  1.0,
+  0.5,
+  1.0,
+  0.5,
+  0.5,
+  1.0,
+  1.0,
+  1.0,
+  0.5,
+  0.5,
+  1.0,
+  1.0,
+  0.5,
+  1.0,
+  1.0,
+  0.5,
+  0.5,
+  1.0,
+  1.0,
+  0.5,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  0.5,
+  0.5,
+  1.0,
+  0.5,
+  1.0,
+  1.0,
+  0.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  0.5,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  0.5,
+  0.5,
+  0.5,
+  0.0,
+  1.0,
+  1.0,
+  0.5,
+  0.5,
+  0.5,
+  1.0,
+  1.0,
+  0.5,
+  0.5,
+  0.5,
+  0.5,
+  0.0,
+  0.5,
+  0.5
+ ],
+ "per_question_recall@10": [
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  0.5,
+  1.0,
+  1.0,
+  1.0,
+  0.5,
+  1.0,
+  1.0,
+  0.5,
+  1.0,
+  1.0,
+  1.0,
+  0.5,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  0.5,
+  1.0,
+  1.0,
+  0.5,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  0.5,
+  1.0,
+  0.5,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  0.5,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  0.5,
+  1.0,
+  1.0,
+  0.5,
+  1.0,
+  0.5,
+  1.0,
+  1.0,
+  1.0,
+  0.5,
+  1.0,
+  1.0,
+  0.0,
+  1.0,
+  1.0
+ ],
+ "per_question_score": [
+  0.6,
+  0.8,
+  0.6,
+  0.8,
+  0.5,
+  0.8,
+  0.3,
+  0.8,
+  0.5,
+  0.6,
+  0.65,
+  0.5,
+  0.6,
+  0.8,
+  0.8,
+  0.3,
+  0.65,
+  0.8,
+  0.6,
+  0.65,
+  0.8,
+  0.8,
+  0.65,
+  0.5,
+  0.6,
+  0.8,
+  0.5,
+  0.8,
+  0.8,
+  0.8,
+  0.8,
+  0.45,
+  0.3,
+  0.6,
+  0.5,
+  0.8,
+  0.8,
+  0.3,
+  0.8,
+  0.8,
+  0.8,
+  0.8,
+  0.5,
+  0.8,
+  0.8,
+  0.8,
+  0.8,
+  0.6,
+  0.8,
+  0.45,
+  0.45,
+  0.65,
+  0.15,
+  0.8,
+  0.6,
+  0.5,
+  0.45,
+  0.5,
+  0.8,
+  0.6,
+  0.45,
+  0.5,
+  0.45,
+  0.45,
+  0.0,
+  0.45,
+  0.65
+ ],
+ "_evaluated_on": "test"
+}

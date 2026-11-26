@@ -1,0 +1,161 @@
+{
+ "name": "HGRAG benchmark sample",
+ "source_paper": "Association by Design: A Brain-Inspired Hybrid Retrieval Architecture for Multi-Hop Retrieval-Augmented Generation (HGRAG)",
+ "benchmark": "HotpotQA distractor split (official public release)",
+ "split_seed": 20240917,
+ "n_passages_in_sample": 200,
+ "n_passages_full": 1172,
+ "n_questions_in_sample": 19,
+ "n_questions_full": 111,
+ "n_result_files": 19,
+ "graph_in_sample": {
+  "entities": 1346,
+  "relations": 1589,
+  "nodes": 1346,
+  "edges": 5073
+ },
+ "graph_full": {
+  "entities": 6728,
+  "relations": 8692,
+  "nodes": 6728,
+  "edges": 33539
+ },
+ "files": [
+  {
+   "path": "README.md",
+   "bytes": 3033,
+   "sha256": "040f84d8d5595082035134b000afa653ec7dc7125865bf69b5d98d9005cf704e"
+  },
+  {
+   "path": "kg/activation_network.json",
+   "bytes": 2175245,
+   "sha256": "8fb3177524e4778c4d25d8c7f45e0b0341d738df44fb90e9a261180314912be4"
+  },
+  {
+   "path": "kg/entities.json",
+   "bytes": 655788,
+   "sha256": "7385f21d4b78d0b00b5fda242b02d4588047a052e63204abaa65df7793cda45c"
+  },
+  {
+   "path": "kg/passages.json",
+   "bytes": 265566,
+   "sha256": "ca83cb2faf2798a0d41d4cf5689d7db7a94f1c197dfe36a1a839458034e6d1aa"
+  },
+  {
+   "path": "kg/questions.json",
+   "bytes": 6277,
+   "sha256": "0c07bdb2ae6d6c00507004e542ce0da5146eed02556caa5153ac0b4e97442d8e"
+  },
+  {
+   "path": "kg/raw_extractions.jsonl",
+   "bytes": 4640013,
+   "sha256": "17037f8fbd72880f5e6ce782c9e25a2d18e6a8830caa35c15467e5c22e831fc6"
+  },
+  {
+   "path": "kg/relations.json",
+   "bytes": 556298,
+   "sha256": "e1664e62c7851ba347fbd27bb4436b0034f6a65e15abb439b779642f80fd5b81"
+  },
+  {
+   "path": "kg/splits.json",
+   "bytes": 3886,
+   "sha256": "940c897012be6bd9c7bbe6a1cd5b53dede2dcf225edc0aded55bf739ceca2758"
+  },
+  {
+   "path": "results/exp10_orthogonality.json",
+   "bytes": 2865,
+   "sha256": "813454cac26d3e70851559e23f789e38031244114eac0bfbc72b27663159b66b"
+  },
+  {
+   "path": "results/exp11_significance_sweeps.json",
+   "bytes": 63477,
+   "sha256": "40bfde135cd021385195a138e285e7878849c8aa5f60266a93866aba487d0baf"
+  },
+  {
+   "path": "results/exp12_hnsw_parity.json",
+   "bytes": 784,
+   "sha256": "2d2a99593de0616d0265e7cff07a1e3d8560c52381000b43250a07cf7aea0f85"
+  },
+  {
+   "path": "results/exp13_keyword_provenance.json",
+   "bytes": 646,
+   "sha256": "9b978a07ec58263fde7e5c95767a2cdf0890d9c51967305dba9f38618f9a7e6a"
+  },
+  {
+   "path": "results/exp14_hipporag.json",
+   "bytes": 3947,
+   "sha256": "36ac648b4893a33c6cd3894a59df098d568cfe6afa90fbe8208e217ff1d83b0c"
+  },
+  {
+   "path": "results/exp14_hipporag_latency.json",
+   "bytes": 1612,
+   "sha256": "da0752cbc5e71ff5dff330941dc8c8e71e9800aea27ced2de2c5c44477739283"
+  },
+  {
+   "path": "results/exp14_hipporag_test.json",
+   "bytes": 39151,
+   "sha256": "fa922a580c2b8cf358a829b509e93d93fb8eb0f49880714ad0a71a96b4bbf3b1"
+  },
+  {
+   "path": "results/exp14_significance.json",
+   "bytes": 2782,
+   "sha256": "a53c32005f6a5f9888e611116317e4a060f52b0cc4fd70999d00fe13efded3ec"
+  },
+  {
+   "path": "results/exp1_baselines.json",
+   "bytes": 230147,
+   "sha256": "e61b0d366335c5ac45d123ed362bf34e3998f4b0e1173ab7810a444803ef0e35"
+  },
+  {
+   "path": "results/exp2_dualpath.json",
+   "bytes": 657,
+   "sha256": "8a5f45977a49fa32ac7a5ac40db79265f064c5f7d85fed0edabb18ae434c37a2"
+  },
+  {
+   "path": "results/exp3_bottomup.json",
+   "bytes": 49979,
+   "sha256": "8e40763e2214c24460bd398f18b923bc6f70c95b78fd9b65ba4849c6997b1788"
+  },
+  {
+   "path": "results/exp4_weights.json",
+   "bytes": 82428,
+   "sha256": "68f38beb618205bd27ddfc1b370c885f7f8793cb81dd3d3d8bc993578cc156b2"
+  },
+  {
+   "path": "results/exp5_keyword.json",
+   "bytes": 143822,
+   "sha256": "8d6b855c2168f298f5ad4e477f87f4bf949d7fb2c6a2bf95d98684d4294c7780"
+  },
+  {
+   "path": "results/exp6_tuning.json",
+   "bytes": 78379,
+   "sha256": "c9be7d97078f19bf61eebd317eb5427be2ac4eb565c88800cddb7a96154a31a5"
+  },
+  {
+   "path": "results/exp7_latency.json",
+   "bytes": 282,
+   "sha256": "4f6a9e95a033dc390f7481f17c62a4341de1fdbac7f883076b93b94d39b871b1"
+  },
+  {
+   "path": "results/exp8_graph_components.json",
+   "bytes": 16669,
+   "sha256": "a47b1faa6fa37e0c458ded2e4f69758896c6490ae2f69f6495a62c4e416e9e4e"
+  },
+  {
+   "path": "results/exp9_truncation_robust.json",
+   "bytes": 6215,
+   "sha256": "c2656416c5717f55a2f0c8c33a88ffa0db99a9a98bc7d0eed8c06b1c02347826"
+  },
+  {
+   "path": "results/latency_bench.json",
+   "bytes": 5671,
+   "sha256": "7c5c3e5b5ad9203cd279b9d3ff10a419dd94cb32c2539ae4c9fbeb9326b3b47f"
+  },
+  {
+   "path": "results/summary.json",
+   "bytes": 587377,
+   "sha256": "c4d11f8f005f4e13957af9f119c0657e787ffa6aa5d3c707c1bee55d603389fa"
+  }
+ ],
+ "n_files": 27
+}

@@ -1,0 +1,33 @@
+{
+  "counts": {
+    "milvus_only": 1,
+    "kg_only": 25,
+    "both": 37,
+    "neither": 4
+  },
+  "proportions": {
+    "milvus_only": 0.0149,
+    "kg_only": 0.3731,
+    "both": 0.5522,
+    "neither": 0.0597
+  },
+  "n_questions": 67,
+  "_evaluated_on": "test",
+  "tri_counts": {
+    "all_three": 29,
+    "vector+graph": 8,
+    "vector+lexical": 1,
+    "graph+lexical": 16,
+    "only_one": 10,
+    "none": 3
+  },
+  "tri_proportions": {
+    "all_three": 0.4328,
+    "vector+graph": 0.1194,
+    "vector+lexical": 0.0149,
+    "graph+lexical": 0.2388,
+    "only_one": 0.1493,
+    "none": 0.0448
+  },
+  "tri_union_coverage": 0.9776
+}

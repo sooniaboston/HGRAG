@@ -1,0 +1,13 @@
+{
+  "milvus_mean": 0.0009,
+  "kg_mean": 0.0302,
+  "total_mean": 0.0558,
+  "total_median": 0.0553,
+  "total_p95": 0.0706,
+  "n_questions": 67,
+  "backend": "exact",
+  "_evaluated_on": "test",
+  "ragflow_mean": 0.0136,
+  "ragflow_median": 0.0133,
+  "ragflow_p95": 0.0191
+}

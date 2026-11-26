@@ -1,0 +1,19 @@
+{
+ "_evaluated_on": "test",
+ "n_questions": 67,
+ "n_nonempty_K": 66,
+ "n_K_intersects_gold": 44,
+ "n_K_contains_all_gold": 16,
+ "mean_gold_coverage_by_K": 0.4478,
+ "n_questions_with_all_gold_available": 67,
+ "leak_check_n_changed_when_annotations_removed": 0,
+ "leak_check_passed": true,
+ "annotation_fields_stripped": [
+  "gold_titles",
+  "answer",
+  "supporting_facts",
+  "type",
+  "level"
+ ],
+ "note": "K is extracted from question text only. The leak check removes every annotation field from the question record and re-runs the extractor; if K is unchanged for every question, the extraction is provably annotation-free."
+}

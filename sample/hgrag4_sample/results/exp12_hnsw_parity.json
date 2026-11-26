@@ -1,0 +1,25 @@
+{
+ "_evaluated_on": "test",
+ "n_questions": 67,
+ "top_k": 10,
+ "hnsw_params": {
+  "index_type": "HNSW",
+  "M": 16,
+  "efConstruction": 200,
+  "ef_search": 128
+ },
+ "milvus_version": "milvus-lite (pymilvus 3.x)",
+ "overlap_at10_mean": 1.0,
+ "overlap_at10_min": 1.0,
+ "n_identical_topk_sets": 67,
+ "n_top1_changed": 0,
+ "dense_recall@1_exact": 0.3433,
+ "dense_recall@10_exact": 0.7612,
+ "dense_recall@1_hnsw": 0.3433,
+ "dense_recall@10_hnsw": 0.7612,
+ "dense_recall@1_delta_pp": 0.0,
+ "dense_recall@10_delta_pp": 0.0,
+ "latency_exact_mean_ms": 1.1015,
+ "latency_hnsw_mean_ms": 14.2817,
+ "note": "Parity check between the NumPy exact inner-product backend used for all reported numbers and a real Milvus HNSW index with the parameters stated in the manuscript."
+}

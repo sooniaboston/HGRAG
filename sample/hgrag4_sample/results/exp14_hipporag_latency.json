@@ -1,0 +1,85 @@
+{
+ "_evaluated_on": "test",
+ "n_questions": 67,
+ "warmup": 5,
+ "repeats": 7,
+ "method": "per-system warm-up, then repeated over the identical 67 test questions; per-round statistics, then median across rounds (identical protocol to hgrag4_latency_bench.py)",
+ "backend": "exact",
+ "results": {
+  "hipporag_ppr": {
+   "mean": 0.0215,
+   "median": 0.021,
+   "p95": 0.0289,
+   "min": 0.012,
+   "max": 0.7702,
+   "std": 0.0041,
+   "n": 67,
+   "repeats": 7,
+   "per_round": [
+    {
+     "mean": 0.4187,
+     "median": 0.4287,
+     "p95": 0.5866,
+     "min": 0.012,
+     "max": 0.7702,
+     "std": 0.1477,
+     "n": 67
+    },
+    {
+     "mean": 0.0217,
+     "median": 0.0215,
+     "p95": 0.0274,
+     "min": 0.0147,
+     "max": 0.0326,
+     "std": 0.0038,
+     "n": 67
+    },
+    {
+     "mean": 0.0215,
+     "median": 0.021,
+     "p95": 0.0271,
+     "min": 0.0143,
+     "max": 0.032,
+     "std": 0.0034,
+     "n": 67
+    },
+    {
+     "mean": 0.0232,
+     "median": 0.0227,
+     "p95": 0.031,
+     "min": 0.0151,
+     "max": 0.0338,
+     "std": 0.0041,
+     "n": 67
+    },
+    {
+     "mean": 0.0198,
+     "median": 0.019,
+     "p95": 0.0268,
+     "min": 0.0133,
+     "max": 0.0323,
+     "std": 0.0037,
+     "n": 67
+    },
+    {
+     "mean": 0.0214,
+     "median": 0.0205,
+     "p95": 0.0289,
+     "min": 0.0143,
+     "max": 0.0353,
+     "std": 0.0043,
+     "n": 67
+    },
+    {
+     "mean": 0.0213,
+     "median": 0.0203,
+     "p95": 0.0307,
+     "min": 0.0123,
+     "max": 0.0416,
+     "std": 0.0056,
+     "n": 67
+    }
+   ]
+  }
+ }
+}

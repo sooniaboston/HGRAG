@@ -1,0 +1,90 @@
+{
+ "protocol": {
+  "unit": "question (not document)",
+  "cutoff_depth": 10,
+  "hit_rule": "question counted as HIT by a route iff the route's top-10 list contains ALL gold documents of that question (gold_pids subset of route_top10)",
+  "n_questions": 67,
+  "note": "A question is attributed to a route iff that route's top-10 list contains ALL gold documents of the question. The unit is the question, not the document; document-level counts are reported separately for reference."
+ },
+ "question_level": {
+  "vector_graph": {
+   "n_vector": 38,
+   "n_graph": 62,
+   "n_both": 37,
+   "n_vector_only": 1,
+   "n_graph_only": 25,
+   "n_union": 63,
+   "n_symmetric_diff": 26,
+   "containment_vector": 0.9736842105263158,
+   "containment_graph": 0.5967741935483871,
+   "jaccard": 0.5873015873015873,
+   "relative_excess_graph_over_vector": 0.6578947368421053,
+   "symmetric_diff_rate": 0.26,
+   "graph_extra_saves_over_vector": 0.6578947368421053
+  },
+  "vector_lexical": {
+   "n_vector": 38,
+   "n_graph": 53,
+   "n_both": 34,
+   "n_vector_only": 4,
+   "n_graph_only": 19,
+   "n_union": 57,
+   "n_symmetric_diff": 23,
+   "containment_vector": 0.8947368421052632,
+   "containment_graph": 0.6415094339622641,
+   "jaccard": 0.5964912280701754,
+   "relative_excess_graph_over_vector": 0.5,
+   "symmetric_diff_rate": 0.25274725274725274,
+   "graph_extra_saves_over_vector": 0.5
+  },
+  "graph_lexical": {
+   "n_vector": 62,
+   "n_graph": 53,
+   "n_both": 50,
+   "n_vector_only": 12,
+   "n_graph_only": 3,
+   "n_union": 65,
+   "n_symmetric_diff": 15,
+   "containment_vector": 0.8064516129032258,
+   "containment_graph": 0.9433962264150944,
+   "jaccard": 0.7692307692307693,
+   "relative_excess_graph_over_vector": 0.04838709677419355,
+   "symmetric_diff_rate": 0.13043478260869565,
+   "graph_extra_saves_over_vector": 0.04838709677419355
+  }
+ },
+ "document_level": {
+  "n_gold_documents": 134,
+  "doc_vector_only": 1,
+  "doc_graph_only": 28,
+  "doc_both": 101,
+  "doc_vector_total": 102,
+  "doc_graph_total": 129,
+  "doc_containment_graph_in_vector": 0.9901960784313726,
+  "doc_jaccard": 0.7769230769230769,
+  "doc_relative_excess_graph_over_vector": 0.27450980392156865
+ },
+ "wv0_leak_check": {
+  "reserved": {
+   "guarantee_mode": "reserved",
+   "use_guarantee": true,
+   "n_questions": 67,
+   "n_questions_with_vector_leak": 23,
+   "share_questions_with_vector_leak": 0.34328358208955223,
+   "n_leaked_docs": 28,
+   "share_leaked_slots": 0.041791044776119404,
+   "is_pure_graph_only": false
+  },
+  "off": {
+   "guarantee_mode": "off",
+   "use_guarantee": false,
+   "n_questions": 67,
+   "n_questions_with_vector_leak": 0,
+   "share_questions_with_vector_leak": 0.0,
+   "n_leaked_docs": 0,
+   "share_leaked_slots": 0.0,
+   "is_pure_graph_only": true
+  }
+ },
+ "_evaluated_on": "test"
+}

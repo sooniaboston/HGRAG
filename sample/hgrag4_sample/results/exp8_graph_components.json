@@ -1,0 +1,731 @@
+{
+  "eq3_terms": {
+    "alpha": "TF-IDF 词法项",
+    "beta": "BM25 词法项",
+    "gamma": "实体重叠项",
+    "delta": "图结构中心性项 (PageRank / betweenness)"
+  },
+  "graph_only": {
+    "graph_full": {
+      "label": "完整图谱路 (生产配置)",
+      "recall@1": 0.3507,
+      "recall@3": 0.709,
+      "recall@5": 0.8358,
+      "recall@10": 0.9627,
+      "mean_rank": 2.9627,
+      "mean_latency": 2.078
+    },
+    "no_lexical_seed": {
+      "label": "关掉词法种子 (lexical_weight=0)",
+      "recall@1": 0.306,
+      "recall@3": 0.5821,
+      "recall@5": 0.7164,
+      "recall@10": 0.8433,
+      "mean_rank": 2.8629,
+      "mean_latency": 0.0268
+    },
+    "no_dense_fallback": {
+      "label": "关掉稠密回退 (dense_fallback=False)",
+      "recall@1": 0.3507,
+      "recall@3": 0.709,
+      "recall@5": 0.8358,
+      "recall@10": 0.9627,
+      "mean_rank": 2.9627,
+      "mean_latency": 0.0246
+    },
+    "no_lexical_no_dense": {
+      "label": "同时关掉词法种子与稠密回退",
+      "recall@1": 0.306,
+      "recall@3": 0.5821,
+      "recall@5": 0.7164,
+      "recall@10": 0.8433,
+      "mean_rank": 2.8629,
+      "mean_latency": 0.0267
+    },
+    "no_title_bonus": {
+      "label": "关掉标题加分 (title_bonus=0)",
+      "recall@1": 0.3507,
+      "recall@3": 0.7015,
+      "recall@5": 0.8358,
+      "recall@10": 0.9627,
+      "mean_rank": 3.0,
+      "mean_latency": 0.0212
+    },
+    "hops_1": {
+      "label": "多跳=1 (仅直接边)",
+      "recall@1": 0.3507,
+      "recall@3": 0.694,
+      "recall@5": 0.8284,
+      "recall@10": 0.9552,
+      "mean_rank": 2.9254,
+      "mean_latency": 0.026
+    },
+    "hops_3": {
+      "label": "多跳=3",
+      "recall@1": 0.3582,
+      "recall@3": 0.709,
+      "recall@5": 0.8209,
+      "recall@10": 0.9627,
+      "mean_rank": 2.9701,
+      "mean_latency": 0.0315
+    },
+    "hops_0": {
+      "label": "多跳=0 (不扩散, 仅种子实体自身文档)",
+      "recall@1": 0.3507,
+      "recall@3": 0.6343,
+      "recall@5": 0.7463,
+      "recall@10": 0.8507,
+      "mean_rank": 2.5896,
+      "mean_latency": 0.025
+    },
+    "no_entity_idf": {
+      "label": "关掉实体 IDF 加权",
+      "recall@1": 0.3657,
+      "recall@3": 0.7015,
+      "recall@5": 0.8284,
+      "recall@10": 0.9478,
+      "mean_rank": 2.8358,
+      "mean_latency": 0.0274
+    },
+    "no_length_norm": {
+      "label": "关掉长度归一 (norm_beta=0)",
+      "recall@1": 0.3433,
+      "recall@3": 0.6791,
+      "recall@5": 0.8284,
+      "recall@10": 0.9627,
+      "mean_rank": 3.0821,
+      "mean_latency": 0.0254
+    }
+  },
+  "full_hgrag": {
+    "hgrag_full": {
+      "label": "完整 HGRAG (生产配置)",
+      "recall@1": 0.4179,
+      "recall@3": 0.7463,
+      "recall@5": 0.8284,
+      "recall@10": 0.9627,
+      "mean_rank": 2.6716,
+      "mean_latency": 0.0877
+    },
+    "hgrag_no_lexical_seed": {
+      "label": "完整 HGRAG, 图谱路关掉词法种子",
+      "recall@1": 0.4179,
+      "recall@3": 0.7313,
+      "recall@5": 0.8284,
+      "recall@10": 0.9478,
+      "mean_rank": 2.6493,
+      "mean_latency": 0.0854
+    },
+    "hgrag_no_dense_fallback": {
+      "label": "完整 HGRAG, 图谱路关掉稠密回退",
+      "recall@1": 0.4179,
+      "recall@3": 0.7463,
+      "recall@5": 0.8284,
+      "recall@10": 0.9627,
+      "mean_rank": 2.6716,
+      "mean_latency": 0.083
+    },
+    "hgrag_hops_1": {
+      "label": "完整 HGRAG, 多跳=1",
+      "recall@1": 0.4254,
+      "recall@3": 0.7388,
+      "recall@5": 0.8209,
+      "recall@10": 0.9627,
+      "mean_rank": 2.6791,
+      "mean_latency": 0.1041
+    }
+  },
+  "significance_graph_only": {
+    "recall@1": {
+      "graph_vs_no_lexical_seed": {
+        "n": 67,
+        "mean_diff": 0.044776,
+        "ci95": [
+          -0.014925,
+          0.11194
+        ],
+        "p_value": 0.2107,
+        "prob_a_better": 0.8993
+      },
+      "graph_vs_no_dense_fallback": {
+        "n": 67,
+        "mean_diff": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "p_value": 1.0,
+        "prob_a_better": 0.0
+      },
+      "graph_vs_no_lexical_no_dense": {
+        "n": 67,
+        "mean_diff": 0.044776,
+        "ci95": [
+          -0.014925,
+          0.11194
+        ],
+        "p_value": 0.2107,
+        "prob_a_better": 0.8993
+      },
+      "graph_vs_no_title_bonus": {
+        "n": 67,
+        "mean_diff": 0.0,
+        "ci95": [
+          -0.022388,
+          0.022388
+        ],
+        "p_value": 1.0,
+        "prob_a_better": 0.3472
+      },
+      "graph_vs_hops_1": {
+        "n": 67,
+        "mean_diff": 0.0,
+        "ci95": [
+          -0.029851,
+          0.029851
+        ],
+        "p_value": 1.0,
+        "prob_a_better": 0.4016
+      },
+      "graph_vs_hops_3": {
+        "n": 67,
+        "mean_diff": -0.007463,
+        "ci95": [
+          -0.022388,
+          0.0
+        ],
+        "p_value": 0.6329,
+        "prob_a_better": 0.0
+      },
+      "graph_vs_hops_0": {
+        "n": 67,
+        "mean_diff": 0.0,
+        "ci95": [
+          -0.029851,
+          0.029851
+        ],
+        "p_value": 1.0,
+        "prob_a_better": 0.404
+      },
+      "graph_vs_no_entity_idf": {
+        "n": 67,
+        "mean_diff": -0.014925,
+        "ci95": [
+          -0.052239,
+          0.022388
+        ],
+        "p_value": 0.5257,
+        "prob_a_better": 0.1443
+      },
+      "graph_vs_no_length_norm": {
+        "n": 67,
+        "mean_diff": 0.007463,
+        "ci95": [
+          -0.044776,
+          0.059701
+        ],
+        "p_value": 0.8838,
+        "prob_a_better": 0.5606
+      }
+    },
+    "recall@3": {
+      "graph_vs_no_lexical_seed": {
+        "n": 67,
+        "mean_diff": 0.126866,
+        "ci95": [
+          0.044776,
+          0.208955
+        ],
+        "p_value": 0.0034,
+        "prob_a_better": 0.9989
+      },
+      "graph_vs_no_dense_fallback": {
+        "n": 67,
+        "mean_diff": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "p_value": 1.0,
+        "prob_a_better": 0.0
+      },
+      "graph_vs_no_lexical_no_dense": {
+        "n": 67,
+        "mean_diff": 0.126866,
+        "ci95": [
+          0.044776,
+          0.208955
+        ],
+        "p_value": 0.0034,
+        "prob_a_better": 0.9989
+      },
+      "graph_vs_no_title_bonus": {
+        "n": 67,
+        "mean_diff": 0.007463,
+        "ci95": [
+          0.0,
+          0.022388
+        ],
+        "p_value": 0.6325,
+        "prob_a_better": 0.6357
+      },
+      "graph_vs_hops_1": {
+        "n": 67,
+        "mean_diff": 0.014925,
+        "ci95": [
+          -0.014925,
+          0.044776
+        ],
+        "p_value": 0.4468,
+        "prob_a_better": 0.7716
+      },
+      "graph_vs_hops_3": {
+        "n": 67,
+        "mean_diff": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "p_value": 1.0,
+        "prob_a_better": 0.0
+      },
+      "graph_vs_hops_0": {
+        "n": 67,
+        "mean_diff": 0.074627,
+        "ci95": [
+          0.007463,
+          0.149254
+        ],
+        "p_value": 0.0538,
+        "prob_a_better": 0.9769
+      },
+      "graph_vs_no_entity_idf": {
+        "n": 67,
+        "mean_diff": 0.007463,
+        "ci95": [
+          -0.037313,
+          0.059701
+        ],
+        "p_value": 0.8752,
+        "prob_a_better": 0.5581
+      },
+      "graph_vs_no_length_norm": {
+        "n": 67,
+        "mean_diff": 0.029851,
+        "ci95": [
+          -0.000187,
+          0.067164
+        ],
+        "p_value": 0.1466,
+        "prob_a_better": 0.9302
+      }
+    },
+    "recall@5": {
+      "graph_vs_no_lexical_seed": {
+        "n": 67,
+        "mean_diff": 0.119403,
+        "ci95": [
+          0.037313,
+          0.208955
+        ],
+        "p_value": 0.0097,
+        "prob_a_better": 0.9959
+      },
+      "graph_vs_no_dense_fallback": {
+        "n": 67,
+        "mean_diff": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "p_value": 1.0,
+        "prob_a_better": 0.0
+      },
+      "graph_vs_no_lexical_no_dense": {
+        "n": 67,
+        "mean_diff": 0.119403,
+        "ci95": [
+          0.037313,
+          0.208955
+        ],
+        "p_value": 0.0097,
+        "prob_a_better": 0.9959
+      },
+      "graph_vs_no_title_bonus": {
+        "n": 67,
+        "mean_diff": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "p_value": 1.0,
+        "prob_a_better": 0.0
+      },
+      "graph_vs_hops_1": {
+        "n": 67,
+        "mean_diff": 0.007463,
+        "ci95": [
+          0.0,
+          0.022388
+        ],
+        "p_value": 0.6308,
+        "prob_a_better": 0.6323
+      },
+      "graph_vs_hops_3": {
+        "n": 67,
+        "mean_diff": 0.014925,
+        "ci95": [
+          0.0,
+          0.037313
+        ],
+        "p_value": 0.2666,
+        "prob_a_better": 0.8702
+      },
+      "graph_vs_hops_0": {
+        "n": 67,
+        "mean_diff": 0.089552,
+        "ci95": [
+          0.022388,
+          0.156716
+        ],
+        "p_value": 0.0135,
+        "prob_a_better": 0.9951
+      },
+      "graph_vs_no_entity_idf": {
+        "n": 67,
+        "mean_diff": 0.007463,
+        "ci95": [
+          -0.029851,
+          0.044776
+        ],
+        "p_value": 0.8472,
+        "prob_a_better": 0.5762
+      },
+      "graph_vs_no_length_norm": {
+        "n": 67,
+        "mean_diff": 0.007463,
+        "ci95": [
+          -0.022388,
+          0.037313
+        ],
+        "p_value": 0.8209,
+        "prob_a_better": 0.5884
+      }
+    },
+    "recall@10": {
+      "graph_vs_no_lexical_seed": {
+        "n": 67,
+        "mean_diff": 0.119403,
+        "ci95": [
+          0.067164,
+          0.179104
+        ],
+        "p_value": 0.0003,
+        "prob_a_better": 1.0
+      },
+      "graph_vs_no_dense_fallback": {
+        "n": 67,
+        "mean_diff": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "p_value": 1.0,
+        "prob_a_better": 0.0
+      },
+      "graph_vs_no_lexical_no_dense": {
+        "n": 67,
+        "mean_diff": 0.119403,
+        "ci95": [
+          0.067164,
+          0.179104
+        ],
+        "p_value": 0.0003,
+        "prob_a_better": 1.0
+      },
+      "graph_vs_no_title_bonus": {
+        "n": 67,
+        "mean_diff": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "p_value": 1.0,
+        "prob_a_better": 0.0
+      },
+      "graph_vs_hops_1": {
+        "n": 67,
+        "mean_diff": 0.007463,
+        "ci95": [
+          0.0,
+          0.022388
+        ],
+        "p_value": 0.6308,
+        "prob_a_better": 0.6323
+      },
+      "graph_vs_hops_3": {
+        "n": 67,
+        "mean_diff": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "p_value": 1.0,
+        "prob_a_better": 0.0
+      },
+      "graph_vs_hops_0": {
+        "n": 67,
+        "mean_diff": 0.11194,
+        "ci95": [
+          0.067164,
+          0.164179
+        ],
+        "p_value": 0.0,
+        "prob_a_better": 1.0
+      },
+      "graph_vs_no_entity_idf": {
+        "n": 67,
+        "mean_diff": 0.014925,
+        "ci95": [
+          0.0,
+          0.037313
+        ],
+        "p_value": 0.2643,
+        "prob_a_better": 0.8708
+      },
+      "graph_vs_no_length_norm": {
+        "n": 67,
+        "mean_diff": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "p_value": 1.0,
+        "prob_a_better": 0.0
+      }
+    },
+    "score": {
+      "graph_vs_no_lexical_seed": {
+        "n": 67,
+        "mean_diff": 0.089552,
+        "ci95": [
+          0.040299,
+          0.142537
+        ],
+        "p_value": 0.0009,
+        "prob_a_better": 0.9998
+      },
+      "graph_vs_no_dense_fallback": {
+        "n": 67,
+        "mean_diff": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "p_value": 1.0,
+        "prob_a_better": 0.0
+      },
+      "graph_vs_no_lexical_no_dense": {
+        "n": 67,
+        "mean_diff": 0.089552,
+        "ci95": [
+          0.040299,
+          0.142537
+        ],
+        "p_value": 0.0009,
+        "prob_a_better": 0.9998
+      },
+      "graph_vs_no_title_bonus": {
+        "n": 67,
+        "mean_diff": 0.0,
+        "ci95": [
+          -0.008955,
+          0.008955
+        ],
+        "p_value": 1.0,
+        "prob_a_better": 0.3472
+      },
+      "graph_vs_hops_1": {
+        "n": 67,
+        "mean_diff": 0.004478,
+        "ci95": [
+          -0.008955,
+          0.019403
+        ],
+        "p_value": 0.6122,
+        "prob_a_better": 0.6833
+      },
+      "graph_vs_hops_3": {
+        "n": 67,
+        "mean_diff": 0.001493,
+        "ci95": [
+          -0.006716,
+          0.010448
+        ],
+        "p_value": 0.7626,
+        "prob_a_better": 0.5917
+      },
+      "graph_vs_hops_0": {
+        "n": 67,
+        "mean_diff": 0.060448,
+        "ci95": [
+          0.029104,
+          0.092537
+        ],
+        "p_value": 0.0,
+        "prob_a_better": 1.0
+      },
+      "graph_vs_no_entity_idf": {
+        "n": 67,
+        "mean_diff": 0.000746,
+        "ci95": [
+          -0.016418,
+          0.018657
+        ],
+        "p_value": 0.9635,
+        "prob_a_better": 0.5136
+      },
+      "graph_vs_no_length_norm": {
+        "n": 67,
+        "mean_diff": 0.005224,
+        "ci95": [
+          -0.016418,
+          0.027612
+        ],
+        "p_value": 0.6595,
+        "prob_a_better": 0.6697
+      }
+    }
+  },
+  "significance": {
+    "recall@1": {
+      "hgrag_vs_hgrag_no_lexical_seed": {
+        "n": 67,
+        "mean_diff": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "p_value": 1.0,
+        "prob_a_better": 0.0
+      },
+      "hgrag_vs_hgrag_no_dense_fallback": {
+        "n": 67,
+        "mean_diff": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "p_value": 1.0,
+        "prob_a_better": 0.0
+      },
+      "hgrag_vs_hgrag_hops_1": {
+        "n": 67,
+        "mean_diff": -0.007463,
+        "ci95": [
+          -0.022388,
+          0.0
+        ],
+        "p_value": 0.63,
+        "prob_a_better": 0.0
+      }
+    },
+    "recall@5": {
+      "hgrag_vs_hgrag_no_lexical_seed": {
+        "n": 67,
+        "mean_diff": 0.0,
+        "ci95": [
+          -0.044776,
+          0.044776
+        ],
+        "p_value": 1.0,
+        "prob_a_better": 0.4296
+      },
+      "hgrag_vs_hgrag_no_dense_fallback": {
+        "n": 67,
+        "mean_diff": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "p_value": 1.0,
+        "prob_a_better": 0.0
+      },
+      "hgrag_vs_hgrag_hops_1": {
+        "n": 67,
+        "mean_diff": 0.007463,
+        "ci95": [
+          -0.014925,
+          0.029851
+        ],
+        "p_value": 0.76,
+        "prob_a_better": 0.6139
+      }
+    },
+    "recall@10": {
+      "hgrag_vs_hgrag_no_lexical_seed": {
+        "n": 67,
+        "mean_diff": 0.014925,
+        "ci95": [
+          0.0,
+          0.037313
+        ],
+        "p_value": 0.2684,
+        "prob_a_better": 0.8688
+      },
+      "hgrag_vs_hgrag_no_dense_fallback": {
+        "n": 67,
+        "mean_diff": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "p_value": 1.0,
+        "prob_a_better": 0.0
+      },
+      "hgrag_vs_hgrag_hops_1": {
+        "n": 67,
+        "mean_diff": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "p_value": 1.0,
+        "prob_a_better": 0.0
+      }
+    },
+    "score": {
+      "hgrag_vs_hgrag_no_lexical_seed": {
+        "n": 67,
+        "mean_diff": 0.004478,
+        "ci95": [
+          -0.008955,
+          0.020149
+        ],
+        "p_value": 0.6565,
+        "prob_a_better": 0.6598
+      },
+      "hgrag_vs_hgrag_no_dense_fallback": {
+        "n": 67,
+        "mean_diff": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "p_value": 1.0,
+        "prob_a_better": 0.0
+      },
+      "hgrag_vs_hgrag_hops_1": {
+        "n": 67,
+        "mean_diff": -0.000746,
+        "ci95": [
+          -0.010448,
+          0.008955
+        ],
+        "p_value": 0.9127,
+        "prob_a_better": 0.4041
+      }
+    }
+  },
+  "_evaluated_on": "test"
+}

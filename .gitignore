@@ -1,0 +1,25 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*.so
+
+# Environments
+.venv/
+venv/
+env/
+
+# Editors
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# Local run artefacts
+out/
+*.log
+!sample/**/*.log
+
+# Large local data (not part of the release)
+merge_evidence.json
+entity_embeddings.npy
+*.db/

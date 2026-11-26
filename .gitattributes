@@ -1,0 +1,14 @@
+# Normalise line endings for text files in the repository.
+* text=auto eol=lf
+
+*.py    text eol=lf
+*.md    text eol=lf
+*.txt   text eol=lf
+*.json  text eol=lf
+*.jsonl text eol=lf
+LICENSE text eol=lf
+
+# Binary assets
+*.pdf  binary
+*.npy  binary
+*.parquet binary
