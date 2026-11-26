@@ -163,6 +163,29 @@ def _sha256(path: str) -> str:
     return h.hexdigest()
 
 
+def _sha256_normalized(path: str) -> str:
+    """计算 *归一化后* (CRLF -> LF) 内容的 SHA-256。
+
+    为什么需要这一步
+    ----------------
+    本仓库的 .gitattributes 声明 `* text=auto eol=lf`, 因此 git 在
+    提交时会把文本文件的 CRLF 归一化为 LF, 而克隆出来的工作副本也是
+    LF。如果清单里的摘要是按 *本地* 的 CRLF 文件算的, 那么任何从
+    仓库克隆的第三方都会看到摘要不符 —— 清单就失去了它的作用。
+
+    这里对文本类文件统一按 LF 归一化后再算摘要, 使得清单与 git
+    实际存储 (以及任何人克隆后得到) 的字节完全一致; 二进制文件
+    (如 .npy / .parquet) 则按原始字节计算。
+    """
+    with open(path, "rb") as fh:
+        raw = fh.read()
+    if b"\x00" in raw[:8192]:          # 二进制, 不做行尾归一化
+        return hashlib.sha256(raw).hexdigest()
+    return hashlib.sha256(
+        raw.replace(b"\r\n", b"\n")
+    ).hexdigest()
+
+
 def _subset_passages(passages: List[Dict[str, Any]],
                      n: int) -> List[Dict[str, Any]]:
     """取前 n 个段落, 并补齐 pid 以便与图谱对上。"""
@@ -313,7 +336,7 @@ def main(argv: Optional[List[str]] = None) -> int:
             manifest["files"].append({
                 "path": rel,
                 "bytes": os.path.getsize(full),
-                "sha256": _sha256(full),
+                "sha256": _sha256_normalized(full),
             })
     manifest["n_files"] = len(manifest["files"])
 

@@ -82,11 +82,19 @@ def main(argv: Optional[List[str]] = None) -> int:
         if not os.path.exists(full):
             bad.append(f["path"] + " (缺失)")
             continue
-        h = hashlib.sha256()
+        # 摘要按 *归一化后* (CRLF -> LF) 的内容计算, 与导出脚本一致。
+        # 仓库的 .gitattributes 规定 `text=auto eol=lf`, 所以克隆得到的
+        # 文件是 LF; 而导出时本机工作副本可能是 CRLF。两者必须按同一
+        # 规则归一化, 否则清单在克隆后必然全部 "摘要不符"。
         with open(full, "rb") as fh:
-            for chunk in iter(lambda: fh.read(1 << 20), b""):
-                h.update(chunk)
-        if h.hexdigest() != f["sha256"]:
+            raw = fh.read()
+        if b"\x00" in raw[:8192]:      # 二进制, 不做行尾归一化
+            digest = hashlib.sha256(raw).hexdigest()
+        else:
+            digest = hashlib.sha256(
+                raw.replace(b"\r\n", b"\n")
+            ).hexdigest()
+        if digest != f["sha256"]:
             bad.append(f["path"] + " (摘要不符)")
     if bad:
         print("      [FAIL] " + "; ".join(bad))
